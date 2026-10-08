@@ -1,4 +1,4 @@
-#select database
+#Use database
 use retail_db
 
 #collection creation
@@ -36,3 +36,50 @@ db.products.findOne()
 db.products.find({
     price: 12000
 })
+
+
+#Find using greater
+db.products.find({
+    price: { $gt: 10000 }
+})
+
+#Find using lesser
+db.products.find({
+    price: { $lt: 5000 }
+})
+
+#Find using greater than or equal
+db.products.find({
+    price: { $gte: 10000 }
+})
+
+#Find using lesser than or equal
+db.products.find({
+    price: { $lte: 5000 }
+})
+
+#Update
+
+db.products.updateOne(
+    { product_id: 101 },
+    { $set: { price: 70000 } }
+)
+
+#Update by increasing
+
+db.products.updateOne(
+    { product_id: 101 },
+    { $inc: { price: 1000 } }
+)
+
+#DELETE
+db.products.deleteOne({
+    product_id: 104
+})
+
+#Display se;ected field
+
+    db.products.find(
+    {},
+    { _id: 0, product_name: 1, price: 1 }
+)

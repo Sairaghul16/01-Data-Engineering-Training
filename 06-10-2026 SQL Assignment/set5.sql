@@ -16,6 +16,8 @@ INSERT INTO registrations VALUES
 (5, 'imran ali', 'IMRAN@MAIL.COM ', '91 9988772211', NULL, '500084'),
 (6, 'Priya Rao', 'priya@gmail', '98765-AB210', 'Pune', '411001');
 
+SELECT * FROM
+
  
 
 

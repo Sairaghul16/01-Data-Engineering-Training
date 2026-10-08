@@ -1,5 +1,24 @@
 #Set 1 — Basics + CRUD + Filtering
 
+CREATE DATABASE sql_practice_pack;
+USE sql_practice_pack;
+CREATE TABLE menu_items (
+    item_id INT PRIMARY KEY,
+    item_name VARCHAR(100),
+    category VARCHAR(50),
+    price DECIMAL(10,2),
+    available_qty INT
+);
+INSERT INTO menu_items VALUES
+(1, 'Chicken Biryani', 'Main Course', 320, 25),
+(2, 'Paneer Tikka', 'Starter', 240, 15),
+(3, 'Masala Dosa', 'Breakfast', 120, 30),
+(4, 'Veg Burger', 'Fast Food', 180, 10),
+(5, 'Cold Coffee', 'Beverage', 150, 20),
+(6, 'Chicken Burger', 'Fast Food', 220, 8),
+(7, 'Idli', 'Breakfast', 80, 40),
+(8, 'Fresh Lime', 'Beverage', 90, 0);
+
 
 #1. Display all menu items
 SELECT * FROM menu_items;

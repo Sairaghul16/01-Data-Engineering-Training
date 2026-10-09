@@ -1,5 +1,21 @@
 #SET 4 Stored Procedurer
 
+CREATE TABLE vehicles (
+    vehicle_id INT PRIMARY KEY,
+    vehicle_name VARCHAR(100),
+    vehicle_type VARCHAR(50),
+    daily_rate DECIMAL(10,2),
+    available_status VARCHAR(20)
+);
+INSERT INTO vehicles VALUES
+(1, 'Honda City', 'Car', 2500, 'Available'),
+(2, 'Toyota Innova', 'Car', 3500, 'Available'),
+(3, 'Royal Enfield', 'Bike', 1200, 'Rented'),
+(4, 'Activa', 'Scooter', 700, 'Available'),
+(5, 'Mahindra Thar', 'SUV', 4500, 'Rented'),
+(6, 'Hyundai Creta', 'SUV', 3200, 'Available'),
+(7, 'KTM Duke', 'Bike', 1500, 'Available');
+
 # 1. GetAllVehicles
 
 DELIMITER //

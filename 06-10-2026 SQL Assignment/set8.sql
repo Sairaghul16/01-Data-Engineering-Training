@@ -1,5 +1,24 @@
 #SET 8 — CTE + Correlated Subqueries
 
+CREATE TABLE insurance_claims (
+    claim_id INT PRIMARY KEY,
+    customer_name VARCHAR(100),
+    insurance_type VARCHAR(50),
+    claim_amount DECIMAL(12,2),
+    branch VARCHAR(50)
+);
+INSERT INTO insurance_claims VALUES
+(1, 'Ajay Kumar', 'Health', 75000, 'Hyderabad'),
+(2, 'Meena Shah', 'Motor', 45000, 'Mumbai'),
+(3, 'Rohit Jain', 'Health', 125000, 'Hyderabad'),
+(4, 'Sara Ali', 'Travel', 30000, 'Delhi'),
+(5, 'Vikas Rao', 'Motor', 85000, 'Mumbai'),
+(6, 'Nisha Singh', 'Health', 60000, 'Delhi'),
+(7, 'Imran Khan', 'Travel', 55000, 'Hyderabad'),
+(8, 'Pooja Patel', 'Motor', 40000, 'Delhi'),
+(9, 'Karan Mehta', 'Health', 150000, 'Mumbai'),
+(10, 'Farah Ahmed', 'Travel', 35000, 'Hyderabad');
+
 # 1. Total claims by insurance type
 WITH claim_totals AS (
     SELECT insurance_type,

@@ -25,33 +25,33 @@ INSERT INTO call_performance VALUES
   
 
 
--- 1. Total calls across entire table
+# 1. Total calls across entire table
 SELECT *,
        SUM(calls_handled) OVER () AS total_calls
 FROM call_performance;
 
--- 2. Total calls by team
+# 2. Total calls by team
 SELECT *,
        SUM(calls_handled) OVER (
            PARTITION BY team
        ) AS team_total_calls
 FROM call_performance;
 
--- 3. Average calls by team
+# 3. Average calls by team
 SELECT *,
        AVG(calls_handled) OVER (
            PARTITION BY team
        ) AS team_avg_calls
 FROM call_performance;
 
--- 4. Team average customer rating
+# 4. Team average customer rating
 SELECT *,
        AVG(customer_rating) OVER (
            PARTITION BY team
        ) AS team_avg_rating
 FROM call_performance;
 
--- 5. Cumulative calls by agent
+# 5. Cumulative calls by agent
 SELECT *,
        SUM(calls_handled) OVER (
            PARTITION BY agent_name
@@ -60,7 +60,7 @@ SELECT *,
        ) AS cumulative_calls
 FROM call_performance;
 
--- 6. Cumulative calls at team level
+# 6. Cumulative calls at team level
 SELECT *,
        SUM(calls_handled) OVER (
            PARTITION BY team
@@ -69,14 +69,14 @@ SELECT *,
        ) AS team_cumulative_calls
 FROM call_performance;
 
--- 7. Compare row calls with team average
+# 7. Compare row calls with team average
 SELECT *,
        calls_handled -
        AVG(calls_handled) OVER (PARTITION BY team)
        AS difference_from_team_avg
 FROM call_performance;
 
--- 8. Previous day's call count
+# 8.Previous days call count
 SELECT *,
        LAG(calls_handled) OVER (
            PARTITION BY agent_name
@@ -84,7 +84,7 @@ SELECT *,
        ) AS previous_calls
 FROM call_performance;
 
--- 9. Difference from previous call count
+# 9. Difference from previous call count
 SELECT *,
        calls_handled -
        LAG(calls_handled) OVER (
@@ -93,7 +93,7 @@ SELECT *,
        ) AS call_difference
 FROM call_performance;
 
--- 10. Total calls per agent without collapsing rows
+# 10. Total calls per agent without collapsing rows
 SELECT *,
        SUM(calls_handled) OVER (
            PARTITION BY agent_name

@@ -1,7 +1,7 @@
 # SECTION H — PANDAS JOIN AND AGGREGATION
 import pandas as pd
 # 75. Perform an inner join using customer_id.
-customers_df = pd.read_csv("customer.csv")
+customers_df = pd.read_csv("customers.csv")
 orders_df = pd.read_csv("orders.csv")
 
 df = pd.merge(orders_df, customers_df,

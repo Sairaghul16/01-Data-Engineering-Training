@@ -1,0 +1,367 @@
+1. Three-Tier Architecture
+
+Application architecture is divided into three main layers.
+
+UI Layer (Frontend)
+
+The UI layer is responsible for displaying the application and interacting with users.
+
+Technologies:
+
+- Angular
+- React.js
+- Ember.js
+
+Responsibilities:
+
+- Display web pages and components.
+- Accept user input.
+- Send HTTP requests to the backend API.
+- Display the response received from the server.
+
+API Layer (Backend)
+
+The API layer handles business logic and communicates with the database.
+
+Technologies:
+
+- Java / Spring Boot
+- Node.js / Express.js
+- Python / FastAPI
+
+Responsibilities:
+
+- Process client requests.
+- Validate user input.
+- Execute business logic.
+- Read and update database records.
+- Return responses in JSON format.
+
+Database Layer (DB)
+
+The database stores and manages application data.
+
+Examples:
+
+- MySQL
+- PostgreSQL
+- MongoDB
+
+Responsibilities:
+
+- Store data.
+- Retrieve data.
+- Update existing records.
+- Delete records.
+
+Architecture Flow
+
+User
+  |
+  v
+Frontend / UI Layer
+(Angular / React.js)
+  |
+  v
+Backend / API Layer
+(Express.js / FastAPI / Spring Boot)
+  |
+  v
+Database Layer
+(MySQL / PostgreSQL / MongoDB)
+
+
+Example: When a user creates a post, the frontend sends a POST request to the API. The backend processes the request and stores the post in the database.
+
+
+2. What Is an API?
+
+API stands for Application Programming Interface.
+
+An API allows two software applications to communicate with each other.
+
+Example
+
+A weather application requests weather information from a weather API. The API returns the weather data, and the application displays it to the user.
+
+Advantages of APIs
+
+- Enables communication between applications.
+- Supports data sharing.
+- Allows frontend and backend development independently.
+- Enables integration with third-party services.
+- Improves code reusability.
+- Supports mobile and web applications.
+
+---
+
+3. REST API
+
+REST stands for Representational State Transfer.
+
+A REST API allows clients to interact with server resources using HTTP methods.
+
+HTTP Methods
+
+Method| Purpose| Example
+GET| Retrieve data| Get all posts
+POST| Create data| Create a new post
+PUT| Update an existing resource| Update a post
+PATCH| Partially update a resource| Update post content
+DELETE| Delete a resource| Delete a post
+
+Example API Endpoints
+
+GET     /posts
+GET     /posts/101
+POST    /posts
+PUT     /posts/101
+PATCH   /posts/101
+DELETE  /posts/101
+
+How HTTP Methods Work
+
+GET: Retrieves data from the database.
+
+POST: Creates a new record in the database.
+
+PUT: Replaces or updates an existing resource.
+
+PATCH: Updates specific fields of a resource.
+
+DELETE: Removes a resource from the database.
+
+---
+
+4. Facebook Post API Example
+
+Consider a Facebook-like application with posts, comments, likes and shares.
+
+GET – Retrieve Posts
+
+GET /posts
+GET /posts/101
+GET /posts/101/comments
+
+Purpose:
+
+- Retrieve all posts.
+- Retrieve a specific post.
+- Retrieve comments associated with a post.
+
+POST – Create Data
+
+POST /posts
+POST /posts/101/comments
+POST /posts/101/likes
+POST /posts/101/shares
+
+Purpose:
+
+- Create a new post.
+- Add a comment.
+- Register a like.
+- Record a share.
+
+Example request body:
+
+{
+  "user_id": 1,
+  "content": "Learning REST APIs today!"
+}
+
+PUT – Update Data
+
+PUT /posts/101
+
+Example request body:
+
+{
+  "user_id": 1,
+  "content": "Learning REST APIs and JSON!"
+}
+
+Purpose: Update the post identified by ID 101.
+
+DELETE – Remove Data
+
+DELETE /posts/101
+DELETE /posts/101/comments/201
+
+Purpose:
+
+- Delete a post.
+- Delete a specific comment.
+
+The backend should check permissions before allowing users to modify or delete posts.
+
+
+5. What Is JSON?
+
+JSON stands for JavaScript Object Notation.
+
+JSON is a lightweight data-interchange format used to send and receive structured data between applications.
+
+JSON can be used with applications developed using Java, .NET, React, Python and many other technologies.
+
+Example JSON
+
+{
+  "id": 101,
+  "name": "Arun",
+  "age": 21,
+  "department": "AI & DS",
+  "skills": ["Python", "Java", "SQL"],
+  "is_active": true
+}
+
+Common JSON Data Types
+
+Data type| Example
+String| ""name": "Arun""
+Number| ""age": 21"
+Boolean| ""is_active": true"
+Array| ""skills": ["Python", "Java"]"
+Object| ""address": {"city": "Chennai"}"
+Null| ""middle_name": null"
+
+JSON Rules
+
+1. Keys must be enclosed in double quotes.
+2. String values must use double quotes.
+3. Numbers and Boolean values do not require quotes.
+4. Key-value pairs are separated by commas.
+5. Objects use curly braces "{}".
+6. Arrays use square brackets "[]".
+7. JSON does not support comments.
+
+
+
+How JSON Works in an API
+
+Client Application
+       |
+       | JSON Request
+       v
+    Backend API
+       |
+       v
+    Database
+       |
+       v
+    Backend API
+       |
+       | JSON Response
+       v
+Client Application
+
+
+
+6. API Examples in Real-World Applications
+
+Stock Market API
+
+Provides stock prices, market information and financial data.
+
+Cricket Score API
+
+Provides live scores, match details, teams and player statistics.
+
+Weather API
+
+Provides temperature, humidity, rainfall and weather forecasts.
+
+IMDb-Style Movie API
+
+Provides movie titles, ratings, release dates and descriptions.
+
+Example weather API response:
+
+{
+  "city": "Chennai",
+  "temperature": 32,
+  "humidity": 65,
+  "condition": "Sunny"
+}
+
+
+
+
+
+7. Frontend Routing
+
+Routing allows users to navigate between different pages or components in an application without manually entering a new URL each time.
+
+Example Routes
+
+Route| Component
+"/"| HomeComponent
+"/cart"| CartComponent
+"/pay"| PaymentComponent
+
+
+8. HTTP Status Codes
+
+HTTP status codes indicate the result of an HTTP request.
+
+Status Code| Meaning
+200 OK| Request completed successfully
+201 Created| Resource created successfully
+204 No Content| Request succeeded with no response body
+400 Bad Request| Invalid request
+401 Unauthorized| Authentication is required or invalid
+403 Forbidden| Access is not permitted
+404 Not Found| Requested resource does not exist
+500 Internal Server Error| Unexpected server error
+
+Example
+
+GET /posts/101
+
+Response:
+200 OK
+
+{
+  "id": 101,
+  "content": "Learning APIs"
+}
+
+If post 999 does not exist:
+
+GET /posts/999
+
+Response:
+404 Not Found
+
+If a new post is created successfully:
+
+POST /posts
+
+Response:
+201 Created
+
+---
+
+9. API Request and Response Example
+
+Request
+
+POST /students
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Arun",
+  "department": "AI & DS"
+}
+
+Response
+
+HTTP/1.1 201 Created
+
+{
+  "message": "Student created successfully",
+  "student_id": 1
+}
+
+

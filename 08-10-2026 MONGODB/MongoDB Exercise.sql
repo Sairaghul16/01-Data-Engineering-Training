@@ -1,1 +1,167 @@
+use retail_db
+db.datatype_practice.insertMany([
+{
+product_id: 501,
+product_name: "Laptop",
+price: 65000,
+stock: 10,
+available: true,
+launch_date: ISODate("2026-01-10"),
+colors: ["Black", "Silver"],
+details: {
+brand: "Dell",
+warranty_years: 2
+}
+},
+{
+product_id: 502,
+product_name: "Headphones",
+price: 4500,
+stock: 25,
+available: true,
+launch_date: ISODate("2026-03-15"),
+colors: ["Black", "Blue"],
+details: {
+brand: "Sony",
+warranty_years: 1
+}
+},
+{
+product_id: 503,
+product_name: "Office Chair",
+price: 9000,
+stock: 0,
+available: false,
+launch_date: ISODate("2025-12-20"),
+colors: ["Black", "Grey"],
+details: {
+brand: "GreenSoul",
+warranty_years: 3
+}
+},
+{
+product_id: 504,
+product_name: "Smart Watch",
+price: 18000,
+stock: 8,
+available: true,
+launch_date: ISODate("2026-06-01"),
+colors: ["Black", "Red"],
+details: {
+brand: "Samsung",
+warranty_years: 1
+}
+}
+])
 
+
+
+1. Display all products
+db.datatype_practice.find()
+
+2. Find the product named Laptop
+db.datatype_practice.find({ product_name: "Laptop" })
+
+3. Price greater than 10000
+db.datatype_practice.find({ price: { $gt: 10000 } })
+
+4. Stock less than 10
+db.datatype_practice.find({ stock: { $lt: 10 } })
+
+5. Available = true
+db.datatype_practice.find({ available: true })
+
+6. Available = false
+db.datatype_practice.find({ available: false })
+
+7. Launched after 1 January 2026
+db.datatype_practice.find({
+    launch_date: { $gt: ISODate("2026-01-01") }
+})
+
+8. Products available in color Black
+db.datatype_practice.find({
+    colors: "Black"
+})
+
+9. Products available in both Black and Blue
+Use $all because the product must contain both colors:
+db.datatype_practice.find({
+    colors: { $all: ["Black", "Blue"] }
+})
+
+10. Brand is Samsung
+Because brand is inside the details object:
+db.datatype_practice.find({
+    "details.brand": "Samsung"
+})
+
+11. Warranty more than 1 year
+db.datatype_practice.find({
+    "details.warranty_years": { $gt: 1 }
+})
+
+12. Increase stock of product 502 by 5
+Use $inc:
+db.datatype_practice.updateOne(
+    { product_id: 502 },
+    { $inc: { stock: 5 } }
+)
+
+
+13. Change product 503 from unavailable to available
+Use $set:
+db.datatype_practice.updateOne(
+    { product_id: 503 },
+    { $set: { available: true } }
+)
+
+14. Add color White to product 501
+Use $push to add an item to the array:
+db.datatype_practice.updateOne(
+    { product_id: 501 },
+    { $push: { colors: "White" } }
+)
+
+15. Change warranty of product 504 to 2 years
+db.datatype_practice.updateOne(
+    { product_id: 504 },
+    { $set: { "details.warranty_years": 2 } }
+)
+
+16. Display only product_name and price
+Use projection:
+db.datatype_practice.find(
+    {},
+    { _id: 0, product_name: 1, price: 1 }
+)
+
+
+17. Find datatype of price
+Use $type:
+db.datatype_practice.find(
+    {},
+    { _id: 0, product_name: 1, price: { $type: "$price" } }
+)
+
+
+
+18. Find datatype of available
+db.datatype_practice.find(
+    {},
+    { _id: 0, product_name: 1, available: { $type: "$available" } }
+)
+
+19. Find datatype of launch_date
+db.datatype_practice.find(
+    {},
+    { _id: 0, product_name: 1, launch_date: { $type: "$launch_date" } }
+)
+
+
+
+20. Find datatype of colors
+db.datatype_practice.find(
+    {},
+    { _id: 0, product_name: 1, colors: { $type: "$colors" } }
+)

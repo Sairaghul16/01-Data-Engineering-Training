@@ -4,11 +4,7 @@
         "name": "Arvind Rao",
         "department": "Operations",
         "salary": 72000,
-        "skills": [
-            "Coordination",
-            "Excel",
-            "Python"
-        ],
+        "skills": ["Coordination", "Excel", "Python"],
         "performance": {
             "rating": 4.3,
             "events_handled": 8
@@ -19,10 +15,7 @@
         "name": "Sanya Gupta",
         "department": "Marketing",
         "salary": 68000,
-        "skills": [
-            "Digital Marketing",
-            "Analytics"
-        ],
+        "skills": ["Digital Marketing", "Analytics"],
         "performance": {
             "rating": 4.6,
             "events_handled": 10
@@ -33,12 +26,7 @@
         "name": "Bilal Ahmed",
         "department": "Technology",
         "salary": 90000,
-        "skills": [
-            "Python",
-            "SQL",
-            "Automation",
-            "Pandas"
-        ],
+        "skills": ["Python", "SQL", "Automation"],
         "performance": {
             "rating": 4.8,
             "events_handled": 12
@@ -49,10 +37,7 @@
         "name": "Trisha Menon",
         "department": "Operations",
         "salary": 76000,
-        "skills": [
-            "Coordination",
-            "Vendor Management"
-        ],
+        "skills": ["Coordination", "Vendor Management"],
         "performance": {
             "rating": 4.1,
             "events_handled": 7

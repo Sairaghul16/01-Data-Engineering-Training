@@ -1,0 +1,110 @@
+PySpark Training Notes
+
+1. What Is PySpark?
+
+PySpark is the Python API for Apache Spark. It is used to process and analyze large amounts of data efficiently.
+
+PySpark supports distributed computing, parallel processing, data transformation, and big data analytics.
+
+Applications of PySpark
+
+Big Data Processing
+
+Data Analytics
+
+ETL Pipelines
+
+Data Cleaning and Transformation
+
+Machine Learning
+
+Real-Time Data Processing
+
+2. What Is a Cluster?
+
+A cluster is a group of connected computers that work together to process data and perform tasks.
+
+In PySpark, a cluster distributes processing tasks across multiple machines to handle large datasets efficiently.
+
+Components of a Spark Cluster
+
+Driver Program
+
+The driver program coordinates the execution of a Spark application and schedules tasks.
+
+SparkContext
+
+SparkContext connects the application to Spark's execution environment and coordinates distributed processing. In modern PySpark applications, SparkSession is generally the main entry point.
+
+Cluster Manager
+
+The cluster manager allocates computing resources such as CPU and memory to Spark applications.
+
+Examples:
+
+Standalone
+
+YARN
+
+Kubernetes
+
+Worker Node
+
+A worker node provides resources to execute processing tasks.
+
+Executor
+
+An executor runs tasks assigned by the driver and can cache data in memory or on disk.
+
+Task
+
+A task is an individual unit of work performed on a partition of data.
+
+Cache
+
+Caching stores data temporarily in memory or on disk to improve performance when the same data is reused.
+
+3. PySpark Architecture
+
+The main components of PySpark architecture are:
+
+Driver Program → Cluster Manager → Worker Nodes → Executors → Tasks
+
+Architecture Flow
+
+The driver program starts the Spark application.
+
+The cluster manager allocates resources.
+
+Worker nodes run executors.
+
+Executors process tasks on data partitions.
+
+Results are returned to the driver or written to storage.
+
+4. Advantages of PySpark
+
+Speed: Supports efficient parallel processing and in-memory computation.
+
+Scalability: Can process data on a single machine or across a cluster.
+
+Big Data Support: Handles very large datasets.
+
+Python Integration: Allows developers to use Python for data engineering.
+
+Versatility: Supports SQL, ETL, streaming, and machine learning.
+
+Cost Efficiency: Can use distributed computing resources according to workload requirements.
+
+5. Challenges of PySpark
+
+Resource management can be complex.
+
+Learning distributed computing concepts takes time.
+
+Cluster configuration requires proper setup.
+
+Data shuffling between machines can be expensive.
+
+Performance depends on partitioning, memory, and workload design.
+

@@ -2,7 +2,7 @@ import json
 
 # 61. Read JSON into Python
 
-with open("staff.json", "r", encoding="utf-8") as file:
+with open("staff_new.json", "r", encoding="utf-8") as file:
     staff = json.load(file)
 
 # 62. Check datatype

@@ -1,7 +1,5 @@
 [
   {
-  },
-  {
     "staff_id": 501,
     "name": "Arvind Rao",
     "department": "Operations",
@@ -11,6 +9,8 @@
       "rating": 4.3,
       "events_handled": 8
     }
+  },
+  {
     "staff_id": 502,
     "name": "Sanya Gupta",
     "department": "Marketing",

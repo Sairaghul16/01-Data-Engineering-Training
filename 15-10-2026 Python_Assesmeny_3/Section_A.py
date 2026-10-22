@@ -1,23 +1,29 @@
-# Q1-4: Booking
-name = input("Attendee name: ")
-tickets = int(input("Number of tickets: "))
-ticket_price = float(input("Ticket price: "))
+# 1–4. Booking amount and discount
 
-total = tickets * ticket_price
-rate = 0.10 if total >= 10000 else 0.05
-discount = total * rate
-final_amount = total - discount
+attendee_name = input("Enter attendee name: ")
+tickets = int(input("Enter number of tickets: "))
+ticket_price = float(input("Enter ticket price: "))
 
-print(f"Attendee      : {name}")
-print(f"Tickets       : {tickets}")
-print(f"Ticket price  : ₹{ticket_price:,.2f}")
-print(f"Total amount  : ₹{total:,.2f}")
-print(f"Discount ({rate:.0%}): ₹{discount:,.2f}")
-print(f"Final amount  : ₹{final_amount:,.2f}")
+total_amount = tickets * ticket_price
 
-# Q5-6: Capacity check
-capacity = int(input("Event capacity: "))
-registered = int(input("Registered participants: "))
+if total_amount >= 10000:
+    discount = total_amount * 0.10
+else:
+    discount = total_amount * 0.05
+
+final_amount = total_amount - discount
+
+print(f"Attendee Name: {attendee_name}")
+print(f"Number of Tickets: {tickets}")
+print(f"Ticket Price: ₹{ticket_price}")
+print(f"Total Amount: ₹{total_amount}")
+print(f"Discount: ₹{discount}")
+print(f"Final Amount: ₹{final_amount}")
+
+# 5–6. Event capacity
+
+capacity = int(input("Enter event capacity: "))
+registered = int(input("Enter registered participants: "))
 
 if registered == capacity:
     print("Full")
@@ -26,27 +32,31 @@ elif registered < capacity:
 else:
     print("Invalid Data")
 
-# Q7: 1-15
-for i in range(1, 16):
-    print(i, end=" ")
-print()
+# 7–8. Print numbers 1–15 and numbers divisible by 3
 
-# Q8: divisible by 3
+for i in range(1, 16):
+    print(i)
+
 for i in range(1, 16):
     if i % 3 == 0:
-        print(i, end=" ")
-print()
+        print(i)
 
-# Q9: countdown
-n = 10
-while n >= 1:
-    print(n)
-    n -= 1
+# 9. Countdown using while loop
 
-# Q10: break and continue
+count = 10
+
+while count >= 1:
+    print(count)
+    count -= 1
+
+# 10. break and continue
+
 for i in range(1, 11):
-    if i == 3:
-        continue          # skip 3
-    if i == 8:
-        break             # stop at 8
+    if i == 5:
+        break
+    print(i)
+
+for i in range(1, 11):
+    if i == 5:
+        continue
     print(i)

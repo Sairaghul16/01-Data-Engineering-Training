@@ -1,0 +1,9 @@
+course_id,course_name,category,duration_hours,price
+C101,Python Basics,Programming,20,1999
+C102,SQL Fundamentals,Database,25,2499
+C103,Data Analysis with Pandas,Data Analysis,,2999
+C104,PySpark Essentials,Big Data,30,3499
+C105,Azure Databricks,Cloud,35,3999
+C105,Azure Databricks,Cloud,35,3999
+C106,,Cloud,15,1499
+C107,DevOps with Azure,DevOps,28,-500

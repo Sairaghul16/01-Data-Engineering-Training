@@ -1,0 +1,16 @@
+enrollment_id,student_id,student_name,course_id,course_name,enrollment_date
+E001,S001,Asha Raman,C101,Python Basics,2024-01-10
+E002,S002,Karthik Kumar,C101,Python Basics,2024-01-12
+E003,S003,Meena Iyer,C102,SQL Fundamentals,2024-01-15
+E005,S005,Ravi Shankar,C103,Data Analysis with Pandas,2024-02-01
+E007,S007,Suresh Babu,C104,PySpark Essentials,2024-02-10
+E009,S009,Arun Prakash,C101,Python Basics,2024-02-14
+E010,S010,Nithya Sri,C102,SQL Fundamentals,2024-02-18
+E011,S011,Vignesh Raj,C103,Data Analysis with Pandas,2024-02-20
+E012,S012,Lavanya Devi,C104,PySpark Essentials,2024-03-01
+E013,S013,Manoj Kumar,C105,Azure Databricks,2024-03-05
+E015,S015,Harish Chandran,C105,Azure Databricks,2024-03-08
+E016,S001,Asha Raman,C102,SQL Fundamentals,2024-03-10
+E017,S002,Karthik Kumar,C103,Data Analysis with Pandas,2024-03-12
+E019,S017,Gayathri Mohan,C104,PySpark Essentials,2024-03-18
+E020,S018,Bala Murugan,C105,Azure Databricks,2024-03-20

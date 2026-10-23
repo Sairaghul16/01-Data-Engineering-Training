@@ -42,22 +42,6 @@ report["students_enrolled"] = report["students_enrolled"].fillna(0).astype(int)
 report["completed_students"] = report["completed_students"].fillna(0).astype(int)
 report = report.sort_values("avg_completion", ascending=False).reset_index(drop=True)
 
-# Build the text report
-best, worst = report.iloc[0], report.iloc[-1]
-lines = [
-    "COURSE-LEVEL PROGRESS REPORT",
-    "=" * 78,
-    f"Courses in report      : {len(report)}",
-    f"Total progress records : {len(progress)}",
-    f"Overall average (NumPy): {overall_avg:.2f}%",
-    "",
-    report.to_string(index=False),
-    "",
-    f"Highest average: {best['course_name']} ({best['avg_completion']}%)",
-    f"Lowest average : {worst['course_name']} ({worst['avg_completion']}%)",
-]
-text = "\n".join(lines)
 
-print(text)
 report.to_csv(REPORTS / "course_level_report.csv", index=False)
 (REPORTS / "course_level_report.txt").write_text(text + "\n")

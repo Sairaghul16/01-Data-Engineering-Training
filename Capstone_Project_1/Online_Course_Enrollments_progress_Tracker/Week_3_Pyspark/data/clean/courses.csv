@@ -1,0 +1,9 @@
+course_id,course_name,category,duration_hours,price
+C101,Python for Beginners,Programming,20,1999
+C102,SQL Essentials,Database,15,1499
+C103,MongoDB Basics,Database,12,1299
+C104,Data Analysis with Pandas,Data,18,2499
+C105,PySpark Fundamentals,Big Data,25,3499
+C106,Azure Databricks,Cloud,22,3999
+C107,Azure DevOps,Cloud,20,3299
+C108,Machine Learning Intro,Data,30,4499

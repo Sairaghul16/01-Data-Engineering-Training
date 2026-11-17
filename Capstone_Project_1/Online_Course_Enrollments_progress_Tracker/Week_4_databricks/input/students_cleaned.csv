@@ -1,0 +1,17 @@
+student_id,student_name,email,city,join_date
+S001,Asha Raman,asha.raman@example.com,Chennai,2023-12-01
+S002,Karthik Kumar,karthik.kumar@example.com,Coimbatore,2023-12-05
+S003,Meena Iyer,meena.iyer@example.com,Madurai,2023-12-10
+S005,Ravi Shankar,ravi.shankar@example.com,Chennai,2024-01-03
+S006,Divya Lakshmi,divya.lakshmi@example.com,Salem,2024-01-05
+S007,Suresh Babu,suresh.babu@example.com,Kumbakonam,2024-01-08
+S008,Priya Nair,priya.nair@example.com,Kochi,2024-01-10
+S009,Arun Prakash,arun.prakash@example.com,Chennai,2024-01-15
+S010,Nithya Sri,nithya.sri@example.com,Thanjavur,2024-01-18
+S011,Vignesh Raj,vignesh.raj@example.com,Madurai,2024-01-20
+S012,Lavanya Devi,lavanya.devi@example.com,Coimbatore,2024-02-01
+S013,Manoj Kumar,manoj.kumar@example.com,Chennai,2024-02-03
+S014,Sneha Reddy,sneha.reddy@example.com,Hyderabad,2024-02-05
+S015,Harish Chandran,harish.chandran@example.com,Trichy,2024-02-07
+S017,Gayathri Mohan,gayathri.mohan@example.com,Kumbakonam,2024-02-12
+S018,Bala Murugan,bala.murugan@example.com,Chennai,2024-02-15

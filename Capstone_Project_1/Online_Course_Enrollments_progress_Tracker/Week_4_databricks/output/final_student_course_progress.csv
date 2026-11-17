@@ -1,0 +1,42 @@
+student_name,course,enroll_date,progress
+Aarav,Python Basics,2026-09-27,100.0
+Aarav,SQL Fundamentals,2026-10-10,40.0
+Diya,Data Analysis with Pandas,2026-09-10,100.0
+Diya,PySpark Essentials,2026-08-21,0.0
+Karthik,Data Analysis with Pandas,2026-10-19,25.0
+Meera,Azure Databricks,2026-10-14,100.0
+Rohan,PySpark Essentials,2026-08-15,0.0
+Sneha,Python Basics,2026-10-10,100.0
+Sneha,SQL Fundamentals,2026-10-20,100.0
+Sneha,Data Analysis with Pandas,2026-10-01,25.0
+Vikram,Python Basics,2026-08-14,40.0
+Vikram,SQL Fundamentals,2026-10-06,70.0
+Vikram,Data Analysis with Pandas,2026-09-19,25.0
+Ananya,SQL Fundamentals,2026-09-03,55.0
+Ananya,Data Analysis with Pandas,2026-10-21,70.0
+Ananya,PySpark Essentials,2026-08-30,10.0
+Arjun,Data Analysis with Pandas,2026-10-11,100.0
+Priya,Data Analysis with Pandas,2026-08-12,100.0
+Rahul,SQL Fundamentals,2026-10-24,70.0
+Rahul,PySpark Essentials,2026-08-15,40.0
+Rahul,Azure Databricks,2026-09-09,40.0
+Kavya,Python Basics,2026-10-14,40.0
+Kavya,SQL Fundamentals,2026-10-12,25.0
+Kavya,Data Analysis with Pandas,2026-09-09,100.0
+Suresh,SQL Fundamentals,2026-10-14,0.0
+Suresh,PySpark Essentials,2026-08-13,40.0
+Suresh,Azure Databricks,2026-09-27,10.0
+Divya,Azure Databricks,2026-08-01,0.0
+Manoj,Data Analysis with Pandas,2026-08-25,0.0
+Manoj,PySpark Essentials,2026-09-20,85.0
+Manoj,Azure Databricks,2026-10-10,85.0
+Lakshmi,Data Analysis with Pandas,2026-08-23,55.0
+Lakshmi,Azure Databricks,2026-08-13,85.0
+Naveen,Data Analysis with Pandas,2026-09-30,85.0
+Pooja,SQL Fundamentals,2026-08-08,10.0
+Pooja,Azure Databricks,2026-10-08,100.0
+Harish,Data Analysis with Pandas,2026-08-09,55.0
+Harish,Azure Databricks,2026-09-20,100.0
+Swathi,Python Basics,2026-08-20,55.0
+Swathi,Data Analysis with Pandas,2026-08-25,85.0
+Swathi,Azure Databricks,2026-10-28,10.0

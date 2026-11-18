@@ -1,0 +1,31 @@
+product_id,warehouse_id,quantity_on_hand,last_movement_date,sku,product_name,category,supplier_id,unit_price,reorder_level,max_stock_level,reorder_quantity,warehouse_name,supplier_name,stock_status,shortage_qty,excess_qty,suggested_order_qty,stock_value
+1,1,92,2026-10-21,ELE-1001,Wireless Mouse,Electronics,1,599.0,25,300,100,Chennai Central WH,TechSource Pvt Ltd,OK,0,0,0,55108.0
+1,2,175,2026-10-18,ELE-1001,Wireless Mouse,Electronics,1,599.0,25,300,100,Bengaluru North WH,TechSource Pvt Ltd,OK,0,0,0,104825.0
+1,3,110,2026-11-07,ELE-1001,Wireless Mouse,Electronics,1,599.0,25,300,100,Hyderabad East WH,TechSource Pvt Ltd,OK,0,0,0,65890.0
+2,1,185,2026-10-14,ELE-1002,USB-C Charger 65W,Electronics,1,1499.0,20,200,80,Chennai Central WH,TechSource Pvt Ltd,OK,0,0,0,277315.0
+2,2,113,2026-11-10,ELE-1002,USB-C Charger 65W,Electronics,1,1499.0,20,200,80,Bengaluru North WH,TechSource Pvt Ltd,OK,0,0,0,169387.0
+2,3,12,2026-10-29,ELE-1002,USB-C Charger 65W,Electronics,1,1499.0,20,200,80,Hyderabad East WH,TechSource Pvt Ltd,LOW_STOCK,8,0,80,17988.0
+3,1,208,2026-11-04,ELE-1003,Bluetooth Speaker,Electronics,1,2999.0,15,150,50,Chennai Central WH,TechSource Pvt Ltd,OVERSTOCK,0,58,0,623792.0
+3,2,64,2026-11-14,ELE-1003,Bluetooth Speaker,Electronics,1,2999.0,15,150,50,Bengaluru North WH,TechSource Pvt Ltd,OK,0,0,0,191936.0
+3,3,117,2026-11-11,ELE-1003,Bluetooth Speaker,Electronics,1,2999.0,15,150,50,Hyderabad East WH,TechSource Pvt Ltd,OK,0,0,0,350883.0
+4,1,32,2026-11-15,FUR-2001,Ergonomic Office Chair,Furniture,3,7499.0,5,60,20,Chennai Central WH,HomeComfort Supplies,OK,0,0,0,239968.0
+4,2,52,2026-11-06,FUR-2001,Ergonomic Office Chair,Furniture,3,7499.0,5,60,20,Bengaluru North WH,HomeComfort Supplies,OK,0,0,0,389948.0
+4,3,79,2026-10-06,FUR-2001,Ergonomic Office Chair,Furniture,3,7499.0,5,60,20,Hyderabad East WH,HomeComfort Supplies,OVERSTOCK,0,19,0,592421.0
+5,1,64,2026-10-30,FUR-2002,Standing Desk,Furniture,3,15999.0,3,30,10,Chennai Central WH,HomeComfort Supplies,OVERSTOCK,0,34,0,1023936.0
+5,2,26,2026-11-05,FUR-2002,Standing Desk,Furniture,3,15999.0,3,30,10,Bengaluru North WH,HomeComfort Supplies,OK,0,0,0,415974.0
+5,3,58,2026-11-11,FUR-2002,Standing Desk,Furniture,3,15999.0,3,30,10,Hyderabad East WH,HomeComfort Supplies,OVERSTOCK,0,28,0,927942.0
+6,1,445,2026-11-08,STA-3001,A4 Paper Ream (500),Stationery,2,320.0,50,500,200,Chennai Central WH,OfficeWorld Traders,OK,0,0,0,142400.0
+6,2,920,2026-11-09,STA-3001,A4 Paper Ream (500),Stationery,2,320.0,50,500,200,Bengaluru North WH,OfficeWorld Traders,OVERSTOCK,0,420,0,294400.0
+6,3,38,2026-11-08,STA-3001,A4 Paper Ream (500),Stationery,2,320.0,50,500,200,Hyderabad East WH,OfficeWorld Traders,LOW_STOCK,12,0,200,12160.0
+7,1,80,2026-11-03,STA-3002,Gel Pen Pack (10),Stationery,2,120.0,60,600,250,Chennai Central WH,OfficeWorld Traders,OK,0,0,0,9600.0
+7,2,120,2026-10-31,STA-3002,Gel Pen Pack (10),Stationery,2,120.0,60,600,250,Bengaluru North WH,OfficeWorld Traders,OK,0,0,0,14400.0
+7,3,263,2026-09-29,STA-3002,Gel Pen Pack (10),Stationery,2,120.0,60,600,250,Hyderabad East WH,OfficeWorld Traders,OK,0,0,0,31560.0
+8,1,294,2026-11-15,APP-4001,Electric Kettle 1.5L,Appliances,3,1299.0,15,120,40,Chennai Central WH,HomeComfort Supplies,OVERSTOCK,0,174,0,381906.0
+8,2,20,2026-11-13,APP-4001,Electric Kettle 1.5L,Appliances,3,1299.0,15,120,40,Bengaluru North WH,HomeComfort Supplies,OK,0,0,0,25980.0
+8,3,22,2026-11-05,APP-4001,Electric Kettle 1.5L,Appliances,3,1299.0,15,120,40,Hyderabad East WH,HomeComfort Supplies,OK,0,0,0,28578.0
+9,1,89,2026-11-15,APP-4002,Mixer Grinder,Appliances,3,3499.0,10,80,30,Chennai Central WH,HomeComfort Supplies,OVERSTOCK,0,9,0,311411.0
+9,2,55,2026-11-02,APP-4002,Mixer Grinder,Appliances,3,3499.0,10,80,30,Bengaluru North WH,HomeComfort Supplies,OK,0,0,0,192445.0
+9,3,21,2026-11-13,APP-4002,Mixer Grinder,Appliances,3,3499.0,10,80,30,Hyderabad East WH,HomeComfort Supplies,OK,0,0,0,73479.0
+10,1,100,2026-10-30,GRO-5001,Basmati Rice 5kg,Grocery,4,650.0,40,400,150,Chennai Central WH,FreshPack Foods,OK,0,0,0,65000.0
+10,2,485,2026-11-04,GRO-5001,Basmati Rice 5kg,Grocery,4,650.0,40,400,150,Bengaluru North WH,FreshPack Foods,OVERSTOCK,0,85,0,315250.0
+10,3,371,2026-11-15,GRO-5001,Basmati Rice 5kg,Grocery,4,650.0,40,400,150,Hyderabad East WH,FreshPack Foods,OK,0,0,0,241150.0

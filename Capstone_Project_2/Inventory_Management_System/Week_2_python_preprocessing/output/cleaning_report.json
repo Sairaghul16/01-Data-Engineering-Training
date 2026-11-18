@@ -1,0 +1,13 @@
+{
+  "rows_loaded": 262,
+  "removed_invalid_ids": 13,
+  "removed_duplicates": 12,
+  "removed_bad_dates": 14,
+  "removed_invalid_quantity": 8,
+  "removed_zero_quantity": 5,
+  "removed_unknown_type": 6,
+  "sign_corrections": 96,
+  "removed_orphans": 4,
+  "rows_negative_running_stock": 4,
+  "rows_after_cleaning": 200
+}

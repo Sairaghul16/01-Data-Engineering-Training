@@ -1,0 +1,9 @@
+product_id,sku,product_name,warehouse_name,quantity_on_hand,max_stock_level,excess_qty
+6,STA-3001,A4 Paper Ream (500),Bengaluru North WH,920,500,420
+8,APP-4001,Electric Kettle 1.5L,Chennai Central WH,294,120,174
+10,GRO-5001,Basmati Rice 5kg,Bengaluru North WH,485,400,85
+3,ELE-1003,Bluetooth Speaker,Chennai Central WH,208,150,58
+5,FUR-2002,Standing Desk,Chennai Central WH,64,30,34
+5,FUR-2002,Standing Desk,Hyderabad East WH,58,30,28
+4,FUR-2001,Ergonomic Office Chair,Hyderabad East WH,79,60,19
+9,APP-4002,Mixer Grinder,Chennai Central WH,89,80,9

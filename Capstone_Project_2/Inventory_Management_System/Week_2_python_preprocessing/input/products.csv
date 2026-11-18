@@ -1,0 +1,11 @@
+product_id,sku,product_name,category,supplier_id,unit_price,reorder_level,max_stock_level,reorder_quantity
+1,ELE-1001,Wireless Mouse,Electronics,1,599.0,25,300,100
+2,ELE-1002,USB-C Charger 65W,Electronics,1,1499.0,20,200,80
+3,ELE-1003,Bluetooth Speaker,Electronics,1,2999.0,15,150,50
+4,FUR-2001,Ergonomic Office Chair,Furniture,3,7499.0,5,60,20
+5,FUR-2002,Standing Desk,Furniture,3,15999.0,3,30,10
+6,STA-3001,A4 Paper Ream (500),Stationery,2,320.0,50,500,200
+7,STA-3002,Gel Pen Pack (10),Stationery,2,120.0,60,600,250
+8,APP-4001,Electric Kettle 1.5L,Appliances,3,1299.0,15,120,40
+9,APP-4002,Mixer Grinder,Appliances,3,3499.0,10,80,30
+10,GRO-5001,Basmati Rice 5kg,Grocery,4,650.0,40,400,150

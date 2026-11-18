@@ -1,0 +1,263 @@
+movement_id,product_id,warehouse_id,movement_type,quantity,movement_date,reference_no,reason
+1112,8,1,RECEIPT,17,20-10-2026,PO-1112,Supplier delivery
+1020,7,2,in,,03-Sep-2026,PO-1020,Opening receipt
+1247,2,1,IN,44,24-Sep-2026,PO-1247,Supplier delivery
+1038,8,1,ADJUSTMENT,-2,08/10/2026,ADJ-1038,Expired
+1234,5,2,OUT,2,24-09-2026,SO-1234,Customer order
+1128,8,1,adjust,2,30-10-2026,ADJ-1128,Stock count
+1015,5,3, IN ,44,2026-09-03,PO-1015,Opening receipt
+1189,5,2,Issue,1,22-10-2026,SO-1189,Customer order
+1135,9,1,SALE,2,04/11/2026,SO-1135,Customer order
+1006,2,3,Purchase,26,01/09/2026,PO-1006,Opening receipt
+1041,1,1,out,3,21-Oct-2026,SO-1041,Customer order
+1054,4,1,out,2,12-Nov-2026,SO-1054,Customer order
+1147,1,1,OUT,3,24/09/2026,SO-1147,Customer order
+1075,6,1,Purchase,118,2026-10-08,PO-1075,Supplier delivery
+1004,2,1,Purchase,123,01-Sep-2026,PO-1004,Opening receipt
+1162,9,3,Adjustment,-2,31-Oct-2026,ADJ-1162,Expired
+1187,2,2,SALE,1,17-09-2026,SO-1187,Customer order
+1018,6,3,IN,62,03/09/2026,PO-1018,Opening receipt
+1043,9,1,Outbound,1,21-Sep-2026,SO-1043,Customer order
+1106,5,3,SALE,2,06/11/2026,SO-1106,Customer order
+1132,1,2,Inbound,32,16-Oct-2026,PO-1132,Supplier delivery
+1116,10,3,ADJUSTMENT,3,08-09-2026,ADJ-1116,Damaged
+1238,5,3,in,6,14-Oct-2026,PO-1238,Supplier delivery
+1180,6,3,SALE,7,04-11-2026,SO-1180,Customer order
+1218,1,2,adjust,3,06-Oct-2026,ADJ-1218,Damaged
+1032,5,3,Outbound,2,29-10-2026,SO-1032,Customer order
+,4,1, IN ,9,06/10/2026,PO-1125,Supplier delivery
+1172,2,3,Issue,3,24/09/2026,SO-1172,Customer order
+1013,5,1,IN,39,03-09-2026,PO-1013,Opening receipt
+1003,abc,3, IN ,383,2026-09-01,PO-1003,Opening receipt
+1236,9,1,SALE,1,15/11/2026,SO-1236,Customer order
+1117,7,1,RECEIPT,71,03/11/2026,PO-1117,Supplier delivery
+1242,5,1,Inbound,7,28-09-2026,PO-1242,Supplier delivery
+1072,9,1, IN ,,09-10-2026,PO-1072,Supplier delivery
+1241,10,3, IN ,89,2026-11-15,PO-1241,Supplier delivery
+1063,3,1,SALE,1,13/09/2026,SO-1063,Customer order
+1184,10,3, OUT ,6,not a date,SO-1184,Customer order
+1016,6,1,Purchase,182,2026-09-03,PO-1016,Opening receipt
+1083,1,2,Inbound,63,2026-10-03,PO-1083,Supplier delivery
+1044,9,3,adjust,3,29-10-2026,ADJ-1044,Expired
+1177,8,3,Purchase,22,2026-11-05,PO-1177,Supplier delivery
+1146,2,2, IN ,45,2026-11-06,PO-1146,Supplier delivery
+1091,5,3,SALE,2,14/10/2026,SO-1091,Customer order
+1062,abc,3,IN,21,25-09-2026,PO-1062,Supplier delivery
+1194,10,2,Outbound,8,29-Oct-2026,SO-1194,Customer order
+1058,0,1,Inbound,54,23/10/2026,PO-1058,Supplier delivery
+1076,7,3,in,181,06/09/2026,PO-1076,Supplier delivery
+1104,6,2,SALE,9,2026-11-08,SO-1104,Customer order
+1197,7,2, OUT ,11,06-09-2026,SO-1197,Customer order
+1126,10,1, IN ,59,2026-09-10,PO-1126,Supplier delivery
+1210,5,3,IN,5,27-10-2026,PO-1210,Supplier delivery
+1096,,2,Outbound,5,09-11-2026,SO-1096,Customer order
+1202,6,3,Purchase,38,31/02/2026,PO-1202,Supplier delivery
+1007,3,1,in,204,04-Sep-2026,PO-1007,Opening receipt
+1033,4,1,OUT,1,09-11-2026,SO-1033,Customer order
+1027,9,3,RECEIPT,21,03/09/2026,PO-1027,Opening receipt
+1070,5,3, IN ,7,2026-11-11,PO-1070,Supplier delivery
+1017,6,2,IN,631,01-09-2026,PO-1017,Opening receipt
+1101,7,1,Issue,12,27/09/2026,SO-1101,Customer order
+1069,2,1,Purchase,0,22-10-2026,PO-1069,Supplier delivery
+1074,2,3,OUT,1,29/10/2026,SO-1074,Customer order
+1191,7,3,,10,05/10/2026,SO-1191,Customer order
+1088,6,2,in,152,09-Nov-2026,PO-1088,Supplier delivery
+1113,9,3,SALE,1,2026-11-13,SO-1113,Customer order
+1037,9,2,in,18,18-10-2026,PO-1037,Supplier delivery
+1133,5,2,Issue,2,10/10/2026,SO-1133,Customer order
+1068,2,3,Outbound,2,02-10-2026,SO-1068,Customer order
+1045,5,2,OUT,2,22-10-2026,SO-1045,Customer order
+1160,1,1,ADJUSTMENT,3,04-Oct-2026,ADJ-1160,Expired
+1080,7,3,adjust,0,24/09/2026,ADJ-1080,Damaged
+1120,1,2,OUT,6,03-10-2026,SO-1120,Customer order
+1205,0,1,ADJ,3,25/10/2026,ADJ-1205,Damaged
+1149,7,2,RECEIPT,155,31/10/2026,PO-1149,Supplier delivery
+1175,5,2,ADJ,3,2026-10-18,ADJ-1175,Damaged
+1222,1,2,out,1,not a date,SO-1222,Customer order
+1051,4,1,SALE,2,2026-09-17,SO-1051,Customer order
+1232,8,1,RECEIPT,19,2026-10-27,PO-1232,Supplier delivery
+1216,1,2,RECEIPT,20,10-Oct-2026,PO-1216,Supplier delivery
+1188,3,3,ADJ,-1,13/10/2026,ADJ-1188,Damaged
+1121,1,1,out,5,30-Sep-2026,SO-1121,Customer order
+1021,7,3, IN ,0,02/09/2026,PO-1021,Opening receipt
+1220,3,3,in,14,2026-09-05,PO-1220,Supplier delivery
+,10,3,ADJ,-2,11/10/2026,ADJ-1141,Damaged
+1047,4,3, IN ,16,03-Oct-2026,PO-1047,Supplier delivery
+1127,6,1,SALE,1,08/11/2026,SO-1127,Customer order
+1200,3,3,ADJ,-1,2026-09-17,ADJ-1200,Stock count
+1217,2,3,OUT,5,02/10/2026,SO-1217,Customer order
+1030,10,3, IN ,224,04-Sep-2026,PO-1030,Opening receipt
+1166,6,1, OUT ,1,26/10/2026,SO-1166,Customer order
+1185,9,2,Issue,2,15-Oct-2026,,Customer order
+1171,1,3,RECEIPT,19,27-10-2026,PO-1171,Supplier delivery
+1114,4,2,Outbound,2,30-10-2026,SO-1114,Customer order
+1240,2,2,Issue,5,03-10-2026,SO-1240,Customer order
+1107,2,3,Inbound,26,not a date,PO-1107,Supplier delivery
+1214,5,1,in,8,,PO-1214,Supplier delivery
+1085,6,2,unknown,-3,2026-09-13,,Expired
+1237,6,3,OUT,12,29-10-2026,SO-1237,Customer order
+1230,9,2,OUT,2,02-11-2026,,Customer order
+1057,4,1,SALE,1,27-10-2026,SO-1057,Customer order
+1064,abc,3,Issue,1,2026-10-06,SO-1064,Customer order
+1082,4,2,SALE,1,25-09-2026,SO-1082,Customer order
+1023,8,2,in,31,02/09/2026,PO-1023,Opening receipt
+1246,6,2,Issue,10,16/10/2026,SO-1246,Customer order
+1008,3,2,IN,109,not a date,PO-1008,Opening receipt
+1192,4,2,unknown,1,2026-10-07,SO-1192,Customer order
+1092,5,3, IN ,8,21-09-2026,PO-1092,Supplier delivery
+1037,9,2,in,18,18-10-2026,PO-1037,Supplier delivery
+1164,2,,Outbound,4,17-10-2026,SO-1164,Customer order
+1084,5,1,RECEIPT,6,03-Oct-2026,PO-1084,Supplier delivery
+1161,5,3,SALE,1,2026-09-10,SO-1161,Customer order
+1250,6,2,RECEIPT,156,19-09-2026,PO-1250,Supplier delivery
+1050,10,3,RECEIPT,65,04-11-2026,PO-1050,Supplier delivery
+1170,1,3,Issue,3,2026-10-05,SO-1170,Customer order
+1044,9,3,adjust,3,29-10-2026,ADJ-1044,Expired
+1078,3,1,Inbound,7,14-10-2026,PO-1078,Supplier delivery
+1011,4,2,IN,32,03-Sep-2026,PO-1011,Opening receipt
+1048,1,1,ADJUSTMENT,-3,13-Sep-2026,ADJ-1048,Expired
+1029,10,2,in,510,03-Sep-2026,PO-1029,Opening receipt
+1224,2,2,Issue,5,01-Nov-2026,SO-1224,Customer order
+1009,3,3, IN ,73,2026-09-02,PO-1009,Opening receipt
+1248,2,2,Issue,4,31-Oct-2026,SO-1248,Customer order
+1056,9,1,OUT,1,11-09-2026,SO-1056,Customer order
+1077,9,1,SALE,1,22-10-2026,SO-1077,Customer order
+1119,7,2,Issue,12,15/09/2026,SO-1119,Customer order
+1061,9,1,RECEIPT,23,15-Oct-2026,PO-1061,Supplier delivery
+1019,7,1,RECEIPT,48,01/09/2026,PO-1019,Opening receipt
+1223,5,1, OUT ,1,21/09/2026,SO-1223,Customer order
+1227,8,2, OUT ,2,2026-10-29,SO-1227,Customer order
+1245,9,1,out,2,23-Oct-2026,SO-1245,Customer order
+1100,7,1,OUT,1,23-09-2026,SO-1100,Customer order
+1163,8,1,Inbound,15,04-Nov-2026,PO-1163,Supplier delivery
+1014,5,2,RECEIPT,27,2026-09-01,PO-1014,Opening receipt
+1087,5,1,Inbound,8,08-10-2026,PO-1087,Supplier delivery
+1103,8,1,Issue,3,03-11-2026,SO-1103,Customer order
+,5,2,Outbound,2,06-Oct-2026,SO-1131,Customer order
+1055,5,2,SALE,1,06-Oct-2026,SO-1055,Customer order
+1196,6,3,ADJUSTMENT,-3,2026-10-12,ADJ-1196,Expired
+1042,1,1,IN,67,15-09-2026,PO-1042,Supplier delivery
+1115,7,3,out,15,26-09-2026,SO-1115,Customer order
+1208,4,2,Issue,2,08-09-2026,SO-1208,Customer order
+1178,7,2,out,12,16-10-2026,SO-1178,Customer order
+1204,5,3,OUT,2,18/10/2026,SO-1204,Customer order
+1159,10,1,Outbound,10,30-10-2026,SO-1159,Customer order
+1089,5,1,Inbound,,30-10-2026,PO-1089,Supplier delivery
+1079,4,3,Issue,2,2026-10-06,SO-1079,Customer order
+1165,7,3,Outbound,6,09/09/2026,SO-1165,Customer order
+1152,2,1,SALE,5,05/09/2026,SO-1152,Customer order
+1153,5,1, IN ,7,2026-10-04,PO-1153,Supplier delivery
+1144,8,1,SALE,2,06-09-2026,SO-1144,Customer order
+1213,3,2,SALE,3,17-Sep-2026,SO-1213,Customer order
+1239,8,1,Inbound,22,18-09-2026,PO-1239,Supplier delivery
+1207,5,3,OUT,2,23/10/2026,SO-1207,Customer order
+1143,5,1, OUT ,1,11/09/2026,SO-1143,Customer order
+1142,6,1,in,0,13/10/2026,PO-1142,Supplier delivery
+1106,5,3,SALE,2,06/11/2026,SO-1106,Customer order
+1173,5,2,Adjustment,-2,05/11/2026,ADJ-1173,Expired
+1102,8,1,IN,32,15-11-2026,PO-1102,Supplier delivery
+1071,2,1, IN ,11,08-10-2026,PO-1071,Supplier delivery
+1157,10,2,Inbound,0,31-Oct-2026,PO-1157,Supplier delivery
+1094,5,1,SALE,2,30-10-2026,SO-1094,Customer order
+1145,8,2,Adjustment,-3,28-Sep-2026,ADJ-1145,Damaged
+1219,9,1,Outbound,1,02-10-2026,SO-1219,Customer order
+1138,9,2,Outbound,2,2026-10-20,SO-1138,Customer order
+1067,6,1,OUT,10,2026-09-06,SO-1067,Customer order
+1065,2,2,in,21,10-Nov-2026,PO-1065,Supplier delivery
+1150,5,3,out,1,,SO-1150,Customer order
+1209,4,3, OUT ,-2,2026-09-13,SO-1209,Customer order
+1040,3,3,ADJ,3,11/11/2026,ADJ-1040,Stock count
+1057,4,1,SALE,1,27-10-2026,SO-1057,Customer order
+1093,abc,3,Outbound,1,13/10/2026,SO-1093,Customer order
+1186,1,3,in,41,13-09-2026,PO-1186,Supplier delivery
+1081,7,1,SALE,6,27/09/2026,SO-1081,Customer order
+1053,1,2,out,1,18-10-2026,SO-1053,Customer order
+1168,10,2,Outbound,4,31/10/2026,SO-1168,Customer order
+1154,8,1,adjust,3,not a date,ADJ-1154,Stock count
+1181,3,2,IN,26,09-Sep-2026,PO-1181,Supplier delivery
+1198,1,3,out,3,07/11/2026,SO-1198,Customer order
+1228,8,1,IN,9,2026-09-15,PO-1228,Supplier delivery
+1215,6,1,Outbound,11,2026-10-22,SO-1215,Customer order
+1204,5,3,OUT,2,18/10/2026,SO-1204,Customer order
+1183,3,1,Outbound,2,04-Nov-2026,SO-1183,Customer order
+1182,8,1,adjust,-1,11-Nov-2026,ADJ-1182,Stock count
+1002,1,2,in,64,02-09-2026,,Opening receipt
+1049,4,2, IN ,7,06/11/2026,PO-1049,Supplier delivery
+1229,3,2,Issue,2,14/11/2026,SO-1229,Customer order
+1105,99,3, OUT ,1,04/11/2026,SO-1105,Customer order
+1140,9,9,Inbound,20,2026-09-28,PO-1140,Supplier delivery
+1235,2,1,out,N/A,2026-09-16,SO-1235,Customer order
+1073,6,1,OUT,5,08-10-2026,,Customer order
+1022,8,1,Purchase,180,01-Sep-2026,PO-1022,Opening receipt
+1060,8,1,Purchase,6,2026-09-29,PO-1060,Supplier delivery
+1123,5,2,XYZ,,2026-09-26,SO-1123,Customer order
+1066,6,1,RECEIPT,81,08/10/2026,PO-1066,Supplier delivery
+1035,2,2,Issue,4,23-Oct-2026,SO-1035,Customer order
+1109,3,3,Inbound,31,02/10/2026,PO-1109,Supplier delivery
+1026,9,2,in,62,31/02/2026,PO-1026,Opening receipt
+1148,4,1,Issue,1,2026-11-15,SO-1148,Customer order
+1211,5,2,RECEIPT,6,2026-09-19,PO-1211,Supplier delivery
+1195,4,2,Purchase,11,05/11/2026,PO-1195,Supplier delivery
+1190,7,3,Purchase,25,28-Sep-2026,PO-1190,Supplier delivery
+1151,4,2,Purchase,7,15-09-2026,PO-1151,Supplier delivery
+1090,7,1,OUT,11,2026-10-17,SO-1090,Customer order
+1098,1,,ADJUSTMENT,3,2026-10-06,ADJ-1098,Stock count
+1197,7,2, OUT ,11,06-09-2026,SO-1197,Customer order
+1203,6,3,ADJ,-2,08-11-2026,ADJ-1203,Stock count
+1226,9,2,OUT,1,02-11-2026,SO-1226,Customer order
+1206,7,1,Outbound,8,2026-10-08,,Customer order
+1059,8,2,Issue,3,29-10-2026,SO-1059,Customer order
+1110,9,2,RECEIPT,18,28-10-2026,PO-1110,Supplier delivery
+1047,4,3, IN ,16,03-Oct-2026,PO-1047,Supplier delivery
+1179,10,2,OUT,7,2026-10-04,SO-1179,Customer order
+1012,4,3,Inbound,67,01/09/2026,PO-1012,Opening receipt
+1095,8,2,out,abc,02/10/2026,SO-1095,Customer order
+1244,7,1,OUT,1,23/09/2026,SO-1244,Customer order
+1249,8,2,IN,21,,PO-1249,Supplier delivery
+1111,10,3,SALE,10,07-Sep-2026,SO-1111,Customer order
+1167,9,2,Inbound,21,27-Oct-2026,PO-1167,Supplier delivery
+1174,3,2,adjust,3,2026-09-29,ADJ-1174,Damaged
+,10,2,Outbound,10,03/10/2026,SO-1199,Customer order
+1001,1,1,IN,abc,01-Sep-2026,PO-1001,Opening receipt
+1243,6,1, OUT ,10,2026-09-28,SO-1243,Customer order
+1139,5,1,OUT,2,20-Sep-2026,SO-1139,Customer order
+1155,2,3,out,3,2026-10-03,SO-1155,Customer order
+1213,3,2,SALE,3,17-Sep-2026,SO-1213,Customer order
+1169,9,1,OUT,2,11-10-2026,SO-1169,Customer order
+1124,5,1,Adjustment,3,08/09/2026,ADJ-1124,Stock count
+1024,8,3,TRANSFER,92,2026-09-03,PO-1024,Opening receipt
+1031,3,2,Purchase,40,2026-09-22,PO-1031,Supplier delivery
+1193,5,3,Inbound,8,,PO-1193,Supplier delivery
+1129,3,3,,-3,2026-11-10,ADJ-1129,Stock count
+1137,10,2,SALE,6,04-Nov-2026,,Customer order
+1201,1,3,Outbound,-1,21-Oct-2026,SO-1201,Customer order
+1225,2,2,IN,44,08-Nov-2026,PO-1225,Supplier delivery
+1010,4,1,in,26,2026-09-03,PO-1010,Opening receipt
+1154,8,1,adjust,3,not a date,ADJ-1154,Stock count
+1158,7,2,OUT,N/A,08/11/2026,SO-1158,Customer order
+1231,2,3,SALE,-2,,SO-1231,Customer order
+1122,4,1,SALE,1,04-11-2026,SO-1122,Customer order
+1046,4,1,Purchase,14,13-09-2026,PO-1046,Supplier delivery
+1025,9,1, IN ,60,02-Sep-2026,PO-1025,Opening receipt
+1156,2,1, OUT ,-5,26-Sep-2026,SO-1156,Customer order
+1039,5,3,Outbound,1,08-Nov-2026,SO-1039,Customer order
+1212,8,2, OUT ,3,13-11-2026,SO-1212,Customer order
+1108,9,1, IN ,17,22/09/2026,,Supplier delivery
+1211,5,2,RECEIPT,6,2026-09-19,PO-1211,Supplier delivery
+,7,3,IN,67,2026-10-09,PO-1130,Supplier delivery
+1150,5,3,out,1,,SO-1150,Customer order
+1221,9,2,in,5,27-09-2026,PO-1221,Supplier delivery
+1134,1,3,RECEIPT,57,2026-09-29,PO-1134,Supplier delivery
+1052,7,2,,11,11-09-2026,SO-1052,Customer order
+1005,2,2,IN,22,2026-09-01,PO-1005,Opening receipt
+1028,10,1,Purchase,51,02-Sep-2026,PO-1028,Opening receipt
+1034,3,3,Issue,2,25/09/2026,SO-1034,Customer order
+1099,7,3,SALE,7,29-Sep-2026,SO-1099,Customer order
+1097,2,1,in,17,14/10/2026,PO-1097,Supplier delivery
+1118,6,1,Inbound,102,02-Nov-2026,PO-1118,Supplier delivery
+1036,5,3, OUT ,1,not a date,SO-1036,Customer order
+1233,7,3, IN ,85,17-Sep-2026,PO-1233,Supplier delivery
+1176,5,3,out,2,not a date,SO-1176,Customer order
+1086,,,IN,5,12-11-2026,PO-1086,Supplier delivery
+1136,1,1,Inbound,36,12-Oct-2026,PO-1136,Supplier delivery
+1160,1,1,ADJUSTMENT,3,04-Oct-2026,ADJ-1160,Expired

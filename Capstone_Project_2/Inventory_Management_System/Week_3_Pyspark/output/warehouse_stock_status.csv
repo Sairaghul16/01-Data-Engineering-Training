@@ -1,0 +1,4 @@
+warehouse_id,warehouse_name,city,total_units,total_stock_value,product_lines,low_stock_items,overstock_items,low_stock_pct,overstock_pct,warehouse_status
+1,Chennai Central WH,Chennai,1589,3130436.0,10,0,4,0.0,40.0,OVERSTOCKED
+2,Bengaluru North WH,Bengaluru,2030,2114545.0,10,0,2,0.0,20.0,BALANCED
+3,Hyderabad East WH,Hyderabad,1091,2342051.0,10,2,2,20.0,20.0,BALANCED

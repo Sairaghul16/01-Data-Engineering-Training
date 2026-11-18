@@ -1,0 +1,11 @@
+warehouse_name,sku,product_name,category,quantity_on_hand,reorder_level,max_stock_level,stock_status
+Bengaluru North WH,GRO-5001,Basmati Rice 5kg,Grocery,485,40,400,OVERSTOCK
+Bengaluru North WH,STA-3001,A4 Paper Ream (500),Stationery,920,50,500,OVERSTOCK
+Chennai Central WH,APP-4001,Electric Kettle 1.5L,Appliances,294,15,120,OVERSTOCK
+Chennai Central WH,APP-4002,Mixer Grinder,Appliances,89,10,80,OVERSTOCK
+Chennai Central WH,ELE-1003,Bluetooth Speaker,Electronics,208,15,150,OVERSTOCK
+Chennai Central WH,FUR-2002,Standing Desk,Furniture,64,3,30,OVERSTOCK
+Hyderabad East WH,ELE-1002,USB-C Charger 65W,Electronics,12,20,200,LOW_STOCK
+Hyderabad East WH,STA-3001,A4 Paper Ream (500),Stationery,38,50,500,LOW_STOCK
+Hyderabad East WH,FUR-2001,Ergonomic Office Chair,Furniture,79,5,60,OVERSTOCK
+Hyderabad East WH,FUR-2002,Standing Desk,Furniture,58,3,30,OVERSTOCK

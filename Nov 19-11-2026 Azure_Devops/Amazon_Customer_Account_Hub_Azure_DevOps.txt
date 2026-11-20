@@ -1,0 +1,2237 @@
+AZURE DEVOPS PROJECT DOCUMENT
+
+AMAZON CUSTOMER ACCOUNT & SERVICES
+
+EPIC  →  FEATURES  →  USER STORIES  →  TASKS
+
+Project Name: Amazon Customer Account Hub
+
+Reference: Customer account dashboard screenshot supplied for this exercise.
+
+Project Overview
+
+This project organises the customer account dashboard into seven Azure DevOps epics. Each epic represents one visible area in the account page: Your Orders, Returns and Refunds, Manage Addresses, Manage Prime, Payment Settings, Account Settings, and Digital Services and Device Support. The backlog describes the customer-facing functions, the expected behaviour, and the development and testing work needed to deliver each area.
+
+Work Item Structure
+
+Epic – a major customer account capability shown on the account dashboard.
+
+Feature – a functional group within an epic that can be planned and delivered.
+
+User Story – a customer or support-user outcome with acceptance criteria.
+
+Task – a specific design, development, integration, data, or testing activity under a user story.
+
+Planning note: Estimates and priorities are practice values for Azure DevOps planning. Actual integrations, policies, membership terms, payment providers and device capabilities must be confirmed before implementation.
+
+EPIC 1 – YOUR ORDERS
+
+Work Item Type: Epic
+
+Parent: None
+
+Priority: 1
+
+Risk: High
+
+Description: Provide customers with one place to review purchases, check shipment progress, view order details, and take permitted actions such as cancelling an order. The area keeps order information consistent across the account page, order detail page, shipment updates and customer notifications.
+
+Business Value: Customers can find order information without contacting support, understand delivery progress, and resolve eligible order issues quickly.
+
+Success Criteria:
+
+Customers can see current and past orders with accurate status and order totals.
+
+Shipment milestones and estimated delivery information are refreshed from the fulfilment source.
+
+Eligible orders can be cancelled and the result is reflected in the order history.
+
+Order details are visible only to the signed-in customer and authorised support staff.
+
+Feature 1.1: Order History and Tracking
+
+Work Item Type: Feature
+
+Parent: Epic: Your Orders
+
+Priority: 1
+
+Description: Show a searchable order list and a detailed view of each order, including items, payment summary, shipment milestones, carrier details and delivery estimate.
+
+User Story: View Recent and Past Orders
+
+Work Item Type: User Story
+
+Parent: Feature: Order History and Tracking
+
+Priority: 1
+
+Story Points: 5
+
+Description: As a customer, I want to see my recent and previous orders so that I can quickly find a purchase and review its status.
+
+The order list is grouped by recent activity and can be filtered by date range or status. Each row shows order number, order date, item summary, total and current status. Selecting an order opens its detail page.
+
+Acceptance Criteria:
+
+The signed-in customer sees only orders belonging to their account.
+
+The list displays order number, date, item summary, total and latest status.
+
+The customer can filter orders by date and status.
+
+Selecting an order opens the matching order detail page.
+
+Task: Create the order history screen
+
+Work Item Type: Task
+
+Parent: User Story: View Recent and Past Orders
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Build the order list, status labels, date filter and empty state for customers with no purchases.
+
+Task: Develop the order history query API
+
+Work Item Type: Task
+
+Parent: User Story: View Recent and Past Orders
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 6 hrs
+
+Description: Return paginated orders for the authenticated customer and support filtering by date and status.
+
+Task: Test order ownership and filters
+
+Work Item Type: Task
+
+Parent: User Story: View Recent and Past Orders
+
+Priority: 1
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Verify account isolation, sorting, pagination, empty results and filter combinations.
+
+Total estimate for User Story: View Recent and Past Orders: 13 hrs.
+
+User Story: Track a Shipment
+
+Work Item Type: User Story
+
+Parent: Feature: Order History and Tracking
+
+Priority: 1
+
+Story Points: 3
+
+Description: As a customer, I want to view shipment progress and the expected delivery date so that I know when my order is likely to arrive.
+
+The detail page presents shipment milestones such as confirmed, packed, shipped, out for delivery and delivered. Carrier tracking information and the latest estimated delivery date are shown when available.
+
+Acceptance Criteria:
+
+The shipment timeline displays milestones in chronological order.
+
+The latest carrier update and estimated delivery date are shown when available.
+
+A delayed shipment is clearly identified with the latest available update.
+
+The page handles missing or temporarily unavailable carrier data without showing a false status.
+
+Task: Design the shipment timeline
+
+Work Item Type: Task
+
+Parent: User Story: Track a Shipment
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Create responsive milestone, delivery estimate and delayed-shipment components.
+
+Task: Integrate carrier tracking updates
+
+Work Item Type: Task
+
+Parent: User Story: Track a Shipment
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 8 hrs
+
+Description: Map carrier events to the order timeline and refresh the latest shipment status.
+
+Task: Validate shipment status scenarios
+
+Work Item Type: Task
+
+Parent: User Story: Track a Shipment
+
+Priority: 1
+
+Activity: Testing
+
+Original Estimate: 4 hrs
+
+Description: Test normal delivery, delayed delivery, missing carrier updates and out-of-order events.
+
+Total estimate for User Story: Track a Shipment: 16 hrs.
+
+Feature 1.2: Order Cancellation and Changes
+
+Work Item Type: Feature
+
+Parent: Epic: Your Orders
+
+Priority: 1
+
+Description: Allow customers to cancel eligible orders and understand when an order can no longer be changed because fulfilment has progressed.
+
+User Story: Cancel an Eligible Order
+
+Work Item Type: User Story
+
+Parent: Feature: Order Cancellation and Changes
+
+Priority: 1
+
+Story Points: 5
+
+Description: As a customer, I want to cancel an order before it is dispatched so that I can stop a purchase I no longer need.
+
+The order detail page displays a cancellation action only while the order is in a cancellable state. The customer selects a reason, reviews the cancellation summary and confirms the request.
+
+Acceptance Criteria:
+
+The cancellation action appears only for eligible order statuses.
+
+The customer must select or enter a cancellation reason.
+
+A confirmation is shown after the cancellation is accepted.
+
+The order status and order history are updated after cancellation.
+
+Task: Build the cancellation request flow
+
+Work Item Type: Task
+
+Parent: User Story: Cancel an Eligible Order
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Add the cancel action, reason selection, confirmation dialog and final result message.
+
+Task: Implement cancellation rules API
+
+Work Item Type: Task
+
+Parent: User Story: Cancel an Eligible Order
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 7 hrs
+
+Description: Check fulfilment state, record the reason and submit the cancellation to the order service.
+
+Task: Test cancellation eligibility
+
+Work Item Type: Task
+
+Parent: User Story: Cancel an Eligible Order
+
+Priority: 1
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Cover eligible, dispatched, already cancelled and duplicate cancellation requests.
+
+Total estimate for User Story: Cancel an Eligible Order: 14 hrs.
+
+User Story: Understand Orders That Cannot Be Changed
+
+Work Item Type: User Story
+
+Parent: Feature: Order Cancellation and Changes
+
+Priority: 1
+
+Story Points: 3
+
+Description: As a customer, I want to know why an order cannot be cancelled or edited so that I understand the next available option.
+
+When fulfilment has started or an item is not eligible for cancellation, the page explains the reason and directs the customer to the relevant return or support process.
+
+Acceptance Criteria:
+
+A non-eligible order displays a clear explanation.
+
+The page does not offer an action that the order service will reject.
+
+Where applicable, the customer is directed to Returns and Refunds or Help.
+
+The explanation matches the latest order status.
+
+Task: Add unavailable-action messages
+
+Work Item Type: Task
+
+Parent: User Story: Understand Orders That Cannot Be Changed
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 3 hrs
+
+Description: Display status-specific explanations and links to the next supported action.
+
+Task: Create order action eligibility service
+
+Work Item Type: Task
+
+Parent: User Story: Understand Orders That Cannot Be Changed
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 5 hrs
+
+Description: Return permitted actions and reason codes based on order and fulfilment state.
+
+Task: Test order action visibility
+
+Work Item Type: Task
+
+Parent: User Story: Understand Orders That Cannot Be Changed
+
+Priority: 1
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Verify messages and available actions across order lifecycle states.
+
+Total estimate for User Story: Understand Orders That Cannot Be Changed: 11 hrs.
+
+EPIC 2 – RETURNS AND REFUNDS
+
+Work Item Type: Epic
+
+Parent: None
+
+Priority: 1
+
+Risk: High
+
+Description: Help customers request a return or exchange, understand return eligibility, obtain return instructions or a mailing label, and follow the refund progress. The experience should make the next step and expected timelines clear.
+
+Business Value: A simpler returns process reduces support contacts, improves customer confidence and makes refund status easier to understand.
+
+Success Criteria:
+
+Eligible items can be submitted for return or exchange with a reason.
+
+Customers receive clear packing, pickup or drop-off instructions.
+
+Refund status and important milestones are visible from the account.
+
+Return requests and refund transactions are linked to the correct order and item.
+
+Feature 2.1: Return and Exchange Requests
+
+Work Item Type: Feature
+
+Parent: Epic: Returns and Refunds
+
+Priority: 1
+
+Description: Provide eligibility checks and a guided request flow for items that can be returned or exchanged.
+
+User Story: Check Item Return Eligibility
+
+Work Item Type: User Story
+
+Parent: Feature: Return and Exchange Requests
+
+Priority: 1
+
+Story Points: 5
+
+Description: As a customer, I want to check whether an item can be returned so that I know my available options before submitting a request.
+
+The item detail shows the return window, eligibility result and any applicable restrictions. The result is based on item category, delivery date and order policy.
+
+Acceptance Criteria:
+
+Eligibility is calculated using the delivered date and configured return window.
+
+Restricted or non-returnable items show a reason.
+
+Eligible items display the available return or exchange actions.
+
+The eligibility result is checked again when the request is submitted.
+
+Task: Build the item eligibility panel
+
+Work Item Type: Task
+
+Parent: User Story: Check Item Return Eligibility
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 3 hrs
+
+Description: Show return-window information, eligible state and restriction messages.
+
+Task: Implement return eligibility rules
+
+Work Item Type: Task
+
+Parent: User Story: Check Item Return Eligibility
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 6 hrs
+
+Description: Evaluate category, delivery date and policy configuration for each order item.
+
+Task: Test return-window boundaries
+
+Work Item Type: Task
+
+Parent: User Story: Check Item Return Eligibility
+
+Priority: 1
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Check items inside, outside and at the edge of the return period.
+
+Total estimate for User Story: Check Item Return Eligibility: 12 hrs.
+
+User Story: Submit a Return or Exchange
+
+Work Item Type: User Story
+
+Parent: Feature: Return and Exchange Requests
+
+Priority: 1
+
+Story Points: 3
+
+Description: As a customer, I want to submit a return or exchange request with a reason so that I can resolve an item issue.
+
+The customer selects the item, chooses return or exchange where available, selects a reason and adds optional comments or photos. The request receives a reference number and next-step instructions.
+
+Acceptance Criteria:
+
+The customer can select only items eligible for the requested action.
+
+A reason is required before submission.
+
+Optional comments and supported images are attached to the request.
+
+A reference number and next-step instructions are displayed after submission.
+
+Task: Create the return request form
+
+Work Item Type: Task
+
+Parent: User Story: Submit a Return or Exchange
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 5 hrs
+
+Description: Build item selection, action type, reason, comment and attachment controls.
+
+Task: Develop return request API
+
+Work Item Type: Task
+
+Parent: User Story: Submit a Return or Exchange
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 7 hrs
+
+Description: Validate eligibility, create the request record and generate a unique reference.
+
+Task: Test request submission
+
+Work Item Type: Task
+
+Parent: User Story: Submit a Return or Exchange
+
+Priority: 1
+
+Activity: Testing
+
+Original Estimate: 4 hrs
+
+Description: Verify required fields, attachments, duplicate submissions and request ownership.
+
+Total estimate for User Story: Submit a Return or Exchange: 16 hrs.
+
+Feature 2.2: Return Logistics and Refund Tracking
+
+Work Item Type: Feature
+
+Parent: Epic: Returns and Refunds
+
+Priority: 1
+
+Description: Coordinate return labels or pickup instructions and show refund progress after the returned item is received and inspected.
+
+User Story: Get Return Instructions and Label
+
+Work Item Type: User Story
+
+Parent: Feature: Return Logistics and Refund Tracking
+
+Priority: 1
+
+Story Points: 5
+
+Description: As a customer, I want to receive a return label or pickup instructions so that I can send the item back correctly.
+
+After a return is approved, the customer can view or print the available label and instructions. The page explains packaging, pickup or drop-off steps and any label expiry.
+
+Acceptance Criteria:
+
+Approved returns display the correct logistics option.
+
+A printable label is available when the carrier supports it.
+
+Pickup or drop-off instructions are specific to the return.
+
+Expired or unavailable labels provide a way to request updated instructions.
+
+Task: Build return label and instruction page
+
+Work Item Type: Task
+
+Parent: User Story: Get Return Instructions and Label
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Display the label, print action, pickup details and packaging guidance.
+
+Task: Integrate return shipment service
+
+Work Item Type: Task
+
+Parent: User Story: Get Return Instructions and Label
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 7 hrs
+
+Description: Create return shipment requests and retrieve label or pickup details from the logistics provider.
+
+Task: Test label generation and expiry
+
+Work Item Type: Task
+
+Parent: User Story: Get Return Instructions and Label
+
+Priority: 1
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Verify label download, provider errors, expiry and replacement-label flow.
+
+Total estimate for User Story: Get Return Instructions and Label: 14 hrs.
+
+User Story: Track Refund Progress
+
+Work Item Type: User Story
+
+Parent: Feature: Return Logistics and Refund Tracking
+
+Priority: 1
+
+Story Points: 3
+
+Description: As a customer, I want to track my refund status so that I know when the money will be returned.
+
+The refund page shows stages such as requested, approved, processing, sent to payment provider and completed. It displays the amount, destination method and latest update.
+
+Acceptance Criteria:
+
+The refund timeline shows the current stage and update date.
+
+The refund amount and destination method match the approved return.
+
+A failed or delayed refund displays a clear explanation and next step.
+
+Completed refunds show a reference or transaction identifier where available.
+
+Task: Design the refund status timeline
+
+Work Item Type: Task
+
+Parent: User Story: Track Refund Progress
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Create status steps, amount summary, destination and exception messages.
+
+Task: Build refund status integration
+
+Work Item Type: Task
+
+Parent: User Story: Track Refund Progress
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 7 hrs
+
+Description: Retrieve refund events and map provider responses to customer-facing statuses.
+
+Task: Test refund lifecycle
+
+Work Item Type: Task
+
+Parent: User Story: Track Refund Progress
+
+Priority: 1
+
+Activity: Testing
+
+Original Estimate: 4 hrs
+
+Description: Cover pending, completed, rejected, delayed and provider-error scenarios.
+
+Total estimate for User Story: Track Refund Progress: 15 hrs.
+
+EPIC 3 – MANAGE ADDRESSES
+
+Work Item Type: Epic
+
+Parent: None
+
+Priority: 2
+
+Risk: Medium
+
+Description: Let customers maintain delivery addresses and choose the correct destination during checkout. Address details include recipient information, contact number, postal code and delivery instructions, with validation to reduce failed deliveries.
+
+Business Value: Accurate address management reduces delivery exceptions, improves checkout speed and gives customers control over saved destinations.
+
+Success Criteria:
+
+Customers can add, edit and remove their own saved addresses.
+
+A default address is clearly identified and can be changed.
+
+Postal code and required address fields are validated before saving.
+
+Address changes are reflected in checkout and delivery selection.
+
+Feature 3.1: Address Book Management
+
+Work Item Type: Feature
+
+Parent: Epic: Manage Addresses
+
+Priority: 2
+
+Description: Provide the create, view, update and delete functions for saved customer addresses.
+
+User Story: Add a New Delivery Address
+
+Work Item Type: User Story
+
+Parent: Feature: Address Book Management
+
+Priority: 2
+
+Story Points: 5
+
+Description: As a customer, I want to save a new delivery address so that I can use it for future orders.
+
+The customer enters recipient name, phone number, street, locality, city, state and postal code. The form validates required fields and allows the customer to mark the address as default.
+
+Acceptance Criteria:
+
+All required address fields must be completed before saving.
+
+Phone number and postal code formats are validated.
+
+The new address is saved under the signed-in customer account.
+
+The customer receives confirmation that the address was added.
+
+Task: Build the add-address form
+
+Work Item Type: Task
+
+Parent: User Story: Add a New Delivery Address
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Create the address fields, validation messages and default-address option.
+
+Task: Create address save API
+
+Work Item Type: Task
+
+Parent: User Story: Add a New Delivery Address
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 5 hrs
+
+Description: Validate and store address details with customer ownership checks.
+
+Task: Test address creation
+
+Work Item Type: Task
+
+Parent: User Story: Add a New Delivery Address
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Test valid, incomplete, invalid-format and duplicate address submissions.
+
+Total estimate for User Story: Add a New Delivery Address: 12 hrs.
+
+User Story: Edit or Remove a Saved Address
+
+Work Item Type: User Story
+
+Parent: Feature: Address Book Management
+
+Priority: 2
+
+Story Points: 3
+
+Description: As a customer, I want to update or remove an address so that my address book stays accurate.
+
+The address book provides edit and remove actions. Before deletion, the customer confirms the action. If the address is used by an active order, the system explains that it cannot be removed until the order is completed or another address is selected where supported.
+
+Acceptance Criteria:
+
+The customer can edit their own saved address.
+
+A confirmation is required before removal.
+
+An address linked to an active shipment is protected from unsafe deletion.
+
+The address list refreshes after a successful update or removal.
+
+Task: Build address edit and delete controls
+
+Work Item Type: Task
+
+Parent: User Story: Edit or Remove a Saved Address
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Add edit form, confirmation dialog and updated address list states.
+
+Task: Implement address update and delete endpoints
+
+Work Item Type: Task
+
+Parent: User Story: Edit or Remove a Saved Address
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 5 hrs
+
+Description: Apply ownership checks and protect addresses referenced by active orders.
+
+Task: Test address maintenance
+
+Work Item Type: Task
+
+Parent: User Story: Edit or Remove a Saved Address
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Verify update, deletion, active-order protection and access control.
+
+Total estimate for User Story: Edit or Remove a Saved Address: 12 hrs.
+
+Feature 3.2: Delivery Preferences and Address Validation
+
+Work Item Type: Feature
+
+Parent: Epic: Manage Addresses
+
+Priority: 2
+
+Description: Improve address quality and store delivery instructions such as landmark, access notes and preferred contact details.
+
+User Story: Validate Address and Postal Code
+
+Work Item Type: User Story
+
+Parent: Feature: Delivery Preferences and Address Validation
+
+Priority: 2
+
+Story Points: 5
+
+Description: As a customer, I want the system to check my address details so that delivery problems can be avoided.
+
+The address form checks required fields and postal-code format. Where a supported address validation service is available, suggested corrections are shown for customer review before saving.
+
+Acceptance Criteria:
+
+Invalid or incomplete address fields show inline messages.
+
+Postal code is checked against the selected city or region where supported.
+
+Suggested corrections require customer confirmation.
+
+The system does not silently replace the customer's entered address.
+
+Task: Add inline address validation
+
+Work Item Type: Task
+
+Parent: User Story: Validate Address and Postal Code
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 3 hrs
+
+Description: Show field-level errors and postal-code feedback in the address form.
+
+Task: Integrate address validation service
+
+Work Item Type: Task
+
+Parent: User Story: Validate Address and Postal Code
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 6 hrs
+
+Description: Send permitted address fields to the validation provider and handle suggestions.
+
+Task: Test address validation cases
+
+Work Item Type: Task
+
+Parent: User Story: Validate Address and Postal Code
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Cover invalid postal codes, ambiguous suggestions and provider unavailability.
+
+Total estimate for User Story: Validate Address and Postal Code: 12 hrs.
+
+User Story: Save Delivery Instructions
+
+Work Item Type: User Story
+
+Parent: Feature: Delivery Preferences and Address Validation
+
+Priority: 2
+
+Story Points: 3
+
+Description: As a customer, I want to add a landmark or delivery note so that the delivery agent can locate my address.
+
+The customer can add optional landmark, entry or access instructions and a preferred delivery contact number. These details are shown to authorised fulfilment users for the relevant shipment.
+
+Acceptance Criteria:
+
+The customer can save optional landmark and delivery notes.
+
+The notes are associated with the selected address or order as configured.
+
+Only authorised fulfilment users can view delivery instructions.
+
+The customer can edit instructions for future deliveries.
+
+Task: Add delivery instruction fields
+
+Work Item Type: Task
+
+Parent: User Story: Save Delivery Instructions
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 3 hrs
+
+Description: Create landmark, access-note and contact preference inputs.
+
+Task: Store and expose delivery notes securely
+
+Work Item Type: Task
+
+Parent: User Story: Save Delivery Instructions
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 5 hrs
+
+Description: Save notes and provide them only to authorised delivery workflows.
+
+Task: Test instruction visibility
+
+Work Item Type: Task
+
+Parent: User Story: Save Delivery Instructions
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Verify edits, order association and access permissions.
+
+Total estimate for User Story: Save Delivery Instructions: 11 hrs.
+
+EPIC 4 – MANAGE PRIME
+
+Work Item Type: Epic
+
+Parent: None
+
+Priority: 2
+
+Risk: Medium
+
+Description: Give customers a clear view of their Prime membership, benefits and renewal information. Customers can review membership status, explore included benefits and manage available membership actions.
+
+Business Value: Clear membership information helps customers understand the value of their subscription and manage renewals with fewer support requests.
+
+Success Criteria:
+
+Membership status and renewal date are displayed accurately.
+
+Eligible benefits are described with clear access paths.
+
+Customers can review available membership plans and terms.
+
+Membership changes are confirmed and reflected in the account.
+
+Feature 4.1: Membership Overview and Benefits
+
+Work Item Type: Feature
+
+Parent: Epic: Manage Prime
+
+Priority: 2
+
+Description: Display the customer's membership state, plan information, renewal date and benefit catalogue.
+
+User Story: View Prime Membership Details
+
+Work Item Type: User Story
+
+Parent: Feature: Membership Overview and Benefits
+
+Priority: 2
+
+Story Points: 5
+
+Description: As a member, I want to view my Prime plan and renewal information so that I understand my current membership.
+
+The membership page shows active, trial, paused or expired status, plan type, start date and next renewal date when applicable.
+
+Acceptance Criteria:
+
+The current membership status is displayed clearly.
+
+Plan name and billing interval are shown where applicable.
+
+The next renewal date is shown for renewable memberships.
+
+Expired or inactive memberships display the available next action.
+
+Task: Build membership summary page
+
+Work Item Type: Task
+
+Parent: User Story: View Prime Membership Details
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Display plan, status, dates and membership action links.
+
+Task: Connect membership profile API
+
+Work Item Type: Task
+
+Parent: User Story: View Prime Membership Details
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 5 hrs
+
+Description: Retrieve the signed-in customer's current membership record and plan details.
+
+Task: Test membership status display
+
+Work Item Type: Task
+
+Parent: User Story: View Prime Membership Details
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Verify active, trial, paused, expired and cancelled membership states.
+
+Total estimate for User Story: View Prime Membership Details: 12 hrs.
+
+User Story: Explore Prime Benefits
+
+Work Item Type: User Story
+
+Parent: Feature: Membership Overview and Benefits
+
+Priority: 2
+
+Story Points: 3
+
+Description: As a member, I want to see the benefits included in my plan so that I can discover and use them.
+
+The benefits area groups available benefits such as delivery, streaming or other plan-dependent services. Each benefit includes a short description and a link to the relevant service.
+
+Acceptance Criteria:
+
+Only benefits included in the customer's plan are marked as available.
+
+Each benefit has a description and an appropriate destination link.
+
+Unavailable benefits are labelled with eligibility information.
+
+The benefit list adapts to the customer's membership plan and region.
+
+Task: Create the benefits catalogue UI
+
+Work Item Type: Task
+
+Parent: User Story: Explore Prime Benefits
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Build benefit categories, descriptions, availability labels and links.
+
+Task: Configure plan-to-benefit mapping
+
+Work Item Type: Task
+
+Parent: User Story: Explore Prime Benefits
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 5 hrs
+
+Description: Maintain the mapping between membership plans, regions and available benefits.
+
+Task: Test benefit eligibility display
+
+Work Item Type: Task
+
+Parent: User Story: Explore Prime Benefits
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Verify correct benefit visibility for different plan types and regions.
+
+Total estimate for User Story: Explore Prime Benefits: 12 hrs.
+
+Feature 4.2: Membership Plan and Renewal Management
+
+Work Item Type: Feature
+
+Parent: Epic: Manage Prime
+
+Priority: 2
+
+Description: Allow customers to review plan choices and manage renewal or cancellation options in accordance with membership rules.
+
+User Story: Compare Available Membership Plans
+
+Work Item Type: User Story
+
+Parent: Feature: Membership Plan and Renewal Management
+
+Priority: 2
+
+Story Points: 5
+
+Description: As a customer, I want to compare available membership plans so that I can choose the option that suits me.
+
+The page lists eligible plans with billing interval, price, key benefits and renewal terms. The customer can review the terms before proceeding to the membership provider's confirmation flow.
+
+Acceptance Criteria:
+
+Eligible plans show price and billing interval.
+
+Key differences between plans are visible.
+
+Renewal terms are displayed before selection.
+
+The selected plan is revalidated before confirmation.
+
+Task: Design plan comparison view
+
+Work Item Type: Task
+
+Parent: User Story: Compare Available Membership Plans
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Show plan cards, billing terms and benefit comparison.
+
+Task: Build plan eligibility and pricing endpoint
+
+Work Item Type: Task
+
+Parent: User Story: Compare Available Membership Plans
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 6 hrs
+
+Description: Return plans available for the customer's region and account state.
+
+Task: Test plan comparison data
+
+Work Item Type: Task
+
+Parent: User Story: Compare Available Membership Plans
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Verify prices, intervals, eligibility and unavailable plan handling.
+
+Total estimate for User Story: Compare Available Membership Plans: 13 hrs.
+
+User Story: Manage Renewal or Membership Cancellation
+
+Work Item Type: User Story
+
+Parent: Feature: Membership Plan and Renewal Management
+
+Priority: 2
+
+Story Points: 3
+
+Description: As a member, I want to manage renewal or cancellation options so that I can control my membership.
+
+The account shows available renewal settings and cancellation steps. Any change requires a review screen that explains the effective date and impact on benefits.
+
+Acceptance Criteria:
+
+Available membership actions match the customer's current status.
+
+The customer sees the effective date before confirming a change.
+
+A successful change produces an on-screen confirmation.
+
+Membership status and renewal details refresh after the change.
+
+Task: Build membership change confirmation flow
+
+Work Item Type: Task
+
+Parent: User Story: Manage Renewal or Membership Cancellation
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Create review, confirmation and result screens for supported actions.
+
+Task: Integrate membership change service
+
+Work Item Type: Task
+
+Parent: User Story: Manage Renewal or Membership Cancellation
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 6 hrs
+
+Description: Submit eligible membership changes and retrieve the updated membership state.
+
+Task: Test renewal and cancellation paths
+
+Work Item Type: Task
+
+Parent: User Story: Manage Renewal or Membership Cancellation
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 4 hrs
+
+Description: Verify supported changes, confirmation, repeated requests and service errors.
+
+Total estimate for User Story: Manage Renewal or Membership Cancellation: 14 hrs.
+
+EPIC 5 – PAYMENT SETTINGS
+
+Work Item Type: Epic
+
+Parent: None
+
+Priority: 1
+
+Risk: High
+
+Description: Allow customers to add, view, update and remove payment methods used for purchases. The page presents masked details, supports a default payment method and protects sensitive information through provider tokenisation and re-authentication where required.
+
+Business Value: Customers can maintain payment preferences securely and complete future purchases with fewer steps.
+
+Success Criteria:
+
+Customers can add and remove supported payment methods.
+
+Only masked card or account details are displayed.
+
+A default payment method can be selected and updated.
+
+Sensitive credentials are not stored in application logs or exposed in the account UI.
+
+Feature 5.1: Saved Payment Method Management
+
+Work Item Type: Feature
+
+Parent: Epic: Payment Settings
+
+Priority: 1
+
+Description: Manage cards and other supported payment methods linked to the customer account.
+
+User Story: Add a Payment Method
+
+Work Item Type: User Story
+
+Parent: Feature: Saved Payment Method Management
+
+Priority: 1
+
+Story Points: 5
+
+Description: As a customer, I want to add a payment method so that I can use it for future purchases.
+
+The customer selects a supported payment type and completes the secure provider flow. The application stores the provider token and permitted display details, not the full card number or security code.
+
+Acceptance Criteria:
+
+The customer can start the add-method flow for supported types.
+
+Provider authentication is completed before the method is saved.
+
+Only permitted masked details are stored and displayed.
+
+The customer receives confirmation after a successful save.
+
+Task: Build add-payment-method screen
+
+Work Item Type: Task
+
+Parent: User Story: Add a Payment Method
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Create payment type selection, secure entry hand-off and confirmation state.
+
+Task: Integrate payment tokenisation
+
+Work Item Type: Task
+
+Parent: User Story: Add a Payment Method
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 7 hrs
+
+Description: Request a provider token and store only permitted payment metadata.
+
+Task: Test payment method onboarding
+
+Work Item Type: Task
+
+Parent: User Story: Add a Payment Method
+
+Priority: 1
+
+Activity: Testing
+
+Original Estimate: 4 hrs
+
+Description: Verify provider success, failure, duplicate method and sensitive-data handling.
+
+Total estimate for User Story: Add a Payment Method: 15 hrs.
+
+User Story: Remove or Update a Payment Method
+
+Work Item Type: User Story
+
+Parent: Feature: Saved Payment Method Management
+
+Priority: 1
+
+Story Points: 3
+
+Description: As a customer, I want to remove or update a saved payment method so that my account remains current.
+
+The customer can replace expired details or remove an unused method. A confirmation and recent authentication step are applied when required, and a method used by an active transaction is protected.
+
+Acceptance Criteria:
+
+The customer can view available update or removal actions.
+
+Removal requires confirmation and any configured re-authentication.
+
+A payment method in use by a pending transaction cannot be removed unsafely.
+
+The saved-method list refreshes after a successful change.
+
+Task: Create payment method maintenance UI
+
+Work Item Type: Task
+
+Parent: User Story: Remove or Update a Payment Method
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Add update prompts, removal confirmation and status messages.
+
+Task: Implement secure update and removal API
+
+Work Item Type: Task
+
+Parent: User Story: Remove or Update a Payment Method
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 6 hrs
+
+Description: Apply ownership checks, provider token deletion and pending-use validation.
+
+Task: Test payment method changes
+
+Work Item Type: Task
+
+Parent: User Story: Remove or Update a Payment Method
+
+Priority: 1
+
+Activity: Testing
+
+Original Estimate: 4 hrs
+
+Description: Cover expired methods, pending transactions, re-authentication and deletion.
+
+Total estimate for User Story: Remove or Update a Payment Method: 14 hrs.
+
+Feature 5.2: Default Payment and Payment Security
+
+Work Item Type: Feature
+
+Parent: Epic: Payment Settings
+
+Priority: 1
+
+Description: Let customers choose a preferred method and provide clear information about how payment details are protected.
+
+User Story: Set a Default Payment Method
+
+Work Item Type: User Story
+
+Parent: Feature: Default Payment and Payment Security
+
+Priority: 1
+
+Story Points: 5
+
+Description: As a customer, I want to select a default payment method so that checkout can preselect my preferred option.
+
+The customer can choose one eligible saved method as default. The selection is reflected in Payment Settings and used as the suggested method at checkout.
+
+Acceptance Criteria:
+
+Only one eligible method is marked as default at a time.
+
+The customer can change the default method.
+
+An expired or disabled method cannot be selected as default.
+
+The updated default is reflected at the next checkout.
+
+Task: Add default-method selection controls
+
+Work Item Type: Task
+
+Parent: User Story: Set a Default Payment Method
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 3 hrs
+
+Description: Show current default and allow selection of another eligible method.
+
+Task: Create default payment preference API
+
+Work Item Type: Task
+
+Parent: User Story: Set a Default Payment Method
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Save the default selection with customer ownership and eligibility checks.
+
+Task: Test default selection behaviour
+
+Work Item Type: Task
+
+Parent: User Story: Set a Default Payment Method
+
+Priority: 1
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Verify switching, expired methods and account isolation.
+
+Total estimate for User Story: Set a Default Payment Method: 10 hrs.
+
+User Story: Review Payment Security Information
+
+Work Item Type: User Story
+
+Parent: Feature: Default Payment and Payment Security
+
+Priority: 1
+
+Story Points: 3
+
+Description: As a customer, I want to understand how my saved payment details are protected so that I can use payment settings confidently.
+
+A security information section explains masked display, provider tokenisation and account protection. It does not expose provider secrets or internal security configuration.
+
+Acceptance Criteria:
+
+Security information is visible from Payment Settings.
+
+Card numbers and security codes are never displayed in full.
+
+No sensitive payment credentials are written to application logs.
+
+Security content is accessible and understandable.
+
+Task: Create payment security information panel
+
+Work Item Type: Task
+
+Parent: User Story: Review Payment Security Information
+
+Priority: 1
+
+Activity: Development
+
+Original Estimate: 2 hrs
+
+Description: Add concise security explanations and masked payment examples.
+
+Task: Audit payment data handling
+
+Work Item Type: Task
+
+Parent: User Story: Review Payment Security Information
+
+Priority: 1
+
+Activity: Testing
+
+Original Estimate: 5 hrs
+
+Description: Review storage, API responses and logs for prohibited sensitive fields.
+
+Task: Test masking and access controls
+
+Work Item Type: Task
+
+Parent: User Story: Review Payment Security Information
+
+Priority: 1
+
+Activity: Testing
+
+Original Estimate: 4 hrs
+
+Description: Verify masked display, authorised access and absence of sensitive data in logs.
+
+Total estimate for User Story: Review Payment Security Information: 11 hrs.
+
+EPIC 6 – ACCOUNT SETTINGS
+
+Work Item Type: Epic
+
+Parent: None
+
+Priority: 2
+
+Risk: High
+
+Description: Provide a secure place for customers to manage personal profile information, sign-in credentials and communication preferences. Sensitive changes must be verified and important account updates should be confirmed to the customer.
+
+Business Value: Customers can maintain accurate account details, protect account access and control the messages they receive.
+
+Success Criteria:
+
+Customers can update permitted profile information.
+
+Password and sign-in changes require secure verification.
+
+Communication preferences are saved and respected.
+
+Important account changes are recorded and confirmed.
+
+Feature 6.1: Profile Information Management
+
+Work Item Type: Feature
+
+Parent: Epic: Account Settings
+
+Priority: 2
+
+Description: Allow customers to view and update basic personal information associated with their account.
+
+User Story: View and Edit Profile Details
+
+Work Item Type: User Story
+
+Parent: Feature: Profile Information Management
+
+Priority: 2
+
+Story Points: 5
+
+Description: As a customer, I want to update my name and contact details so that my account information remains correct.
+
+The profile page shows editable personal details. Changes to email or phone are verified before becoming the primary contact information.
+
+Acceptance Criteria:
+
+The customer can view current profile details.
+
+Permitted fields can be edited and validated.
+
+Email or phone changes require verification.
+
+A successful update is confirmed and reflected in the profile.
+
+Task: Build profile edit page
+
+Work Item Type: Task
+
+Parent: User Story: View and Edit Profile Details
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Create editable fields, validation and save/cancel actions.
+
+Task: Develop profile update API
+
+Work Item Type: Task
+
+Parent: User Story: View and Edit Profile Details
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 6 hrs
+
+Description: Validate updates and apply verification requirements for contact changes.
+
+Task: Test profile updates
+
+Work Item Type: Task
+
+Parent: User Story: View and Edit Profile Details
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Verify valid changes, invalid data, verification and ownership checks.
+
+Total estimate for User Story: View and Edit Profile Details: 13 hrs.
+
+User Story: Change Password and Sign-in Details
+
+Work Item Type: User Story
+
+Parent: Feature: Profile Information Management
+
+Priority: 2
+
+Story Points: 3
+
+Description: As a customer, I want to update my password securely so that I can protect access to my account.
+
+The customer enters the current password and a new password that meets the configured policy. A successful change invalidates relevant sessions and sends a security notification.
+
+Acceptance Criteria:
+
+The current password is verified before the change is accepted.
+
+The new password is checked against the password policy.
+
+The password is stored using a secure password-hashing method.
+
+Relevant sessions are invalidated and a security notification is sent.
+
+Task: Build password change form
+
+Work Item Type: Task
+
+Parent: User Story: Change Password and Sign-in Details
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 3 hrs
+
+Description: Create current and new password fields with policy guidance.
+
+Task: Implement password change service
+
+Work Item Type: Task
+
+Parent: User Story: Change Password and Sign-in Details
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 6 hrs
+
+Description: Verify credentials, update the password hash and revoke configured sessions.
+
+Task: Test password security flow
+
+Work Item Type: Task
+
+Parent: User Story: Change Password and Sign-in Details
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 4 hrs
+
+Description: Test incorrect current password, policy failures, session revocation and notification.
+
+Total estimate for User Story: Change Password and Sign-in Details: 13 hrs.
+
+Feature 6.2: Privacy and Communication Preferences
+
+Work Item Type: Feature
+
+Parent: Epic: Account Settings
+
+Priority: 2
+
+Description: Give customers control over non-essential messages and provide visibility into important privacy-related settings.
+
+User Story: Manage Email and SMS Preferences
+
+Work Item Type: User Story
+
+Parent: Feature: Privacy and Communication Preferences
+
+Priority: 2
+
+Story Points: 5
+
+Description: As a customer, I want to choose which promotional messages I receive so that communication matches my preferences.
+
+The customer can enable or disable supported promotional email and SMS categories. Essential order, payment and security messages remain separate from promotional settings.
+
+Acceptance Criteria:
+
+Promotional categories are listed with clear descriptions.
+
+The customer can update each supported preference.
+
+Preference changes are saved and applied to future campaigns.
+
+Essential transactional and security messages are not disabled by promotional settings.
+
+Task: Build communication preference page
+
+Work Item Type: Task
+
+Parent: User Story: Manage Email and SMS Preferences
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 3 hrs
+
+Description: Create preference toggles and explanatory text for each message category.
+
+Task: Create preference storage API
+
+Work Item Type: Task
+
+Parent: User Story: Manage Email and SMS Preferences
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 5 hrs
+
+Description: Persist customer choices and expose them to authorised messaging services.
+
+Task: Test preference enforcement
+
+Work Item Type: Task
+
+Parent: User Story: Manage Email and SMS Preferences
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Verify saved settings and ensure transactional messages remain enabled.
+
+Total estimate for User Story: Manage Email and SMS Preferences: 11 hrs.
+
+User Story: Review Account Activity and Security Alerts
+
+Work Item Type: User Story
+
+Parent: Feature: Privacy and Communication Preferences
+
+Priority: 2
+
+Story Points: 3
+
+Description: As a customer, I want to review important account activity so that I can identify changes I did not make.
+
+The account security area shows recent sign-in and security events that are safe to disclose, with date, device or session summary and an action to secure the account when suspicious activity is reported.
+
+Acceptance Criteria:
+
+Recent supported security events are displayed with timestamps.
+
+Sensitive authentication data is not exposed.
+
+The customer can report an unfamiliar activity event.
+
+A security action provides clear next steps and records the report.
+
+Task: Create account activity view
+
+Work Item Type: Task
+
+Parent: User Story: Review Account Activity and Security Alerts
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Display recent security events and unfamiliar-activity action.
+
+Task: Build security event retrieval API
+
+Work Item Type: Task
+
+Parent: User Story: Review Account Activity and Security Alerts
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 5 hrs
+
+Description: Return authorised, customer-safe event summaries with pagination.
+
+Task: Test activity privacy and reporting
+
+Work Item Type: Task
+
+Parent: User Story: Review Account Activity and Security Alerts
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Verify event ownership, masking, pagination and report submission.
+
+Total estimate for User Story: Review Account Activity and Security Alerts: 12 hrs.
+
+EPIC 7 – DIGITAL SERVICES AND DEVICE SUPPORT
+
+Work Item Type: Epic
+
+Parent: None
+
+Priority: 2
+
+Risk: Medium
+
+Description: Help customers find digital services and registered devices, manage supported device settings, and troubleshoot common issues. The area provides guided help and routes unresolved issues to the appropriate support channel.
+
+Business Value: Customers can solve common digital and device problems independently and find the right support path when self-service is not enough.
+
+Success Criteria:
+
+Customers can view supported registered devices and digital services.
+
+Available device actions are limited to the signed-in customer's devices.
+
+Troubleshooting guides provide clear steps for common issues.
+
+Unresolved issues can be escalated with relevant diagnostic context.
+
+Feature 7.1: Digital Services and Registered Devices
+
+Work Item Type: Feature
+
+Parent: Epic: Digital Services and Device Support
+
+Priority: 2
+
+Description: Show digital content or services associated with the account and list supported registered devices.
+
+User Story: View Registered Devices
+
+Work Item Type: User Story
+
+Parent: Feature: Digital Services and Registered Devices
+
+Priority: 2
+
+Story Points: 5
+
+Description: As a customer, I want to see devices registered to my account so that I can manage the devices I use.
+
+The device list shows supported device name, type, registration date and last activity where available. The customer can open a device detail view to see supported actions.
+
+Acceptance Criteria:
+
+Only devices associated with the signed-in account are listed.
+
+Each device shows available identifying and activity information.
+
+Selecting a device opens its detail page.
+
+Unavailable device metadata is handled with a clear fallback.
+
+Task: Build registered device list
+
+Work Item Type: Task
+
+Parent: User Story: View Registered Devices
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Create device cards, activity labels and device detail navigation.
+
+Task: Integrate registered device service
+
+Work Item Type: Task
+
+Parent: User Story: View Registered Devices
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 6 hrs
+
+Description: Retrieve devices for the authenticated account and map provider fields.
+
+Task: Test device ownership and display
+
+Work Item Type: Task
+
+Parent: User Story: View Registered Devices
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Verify account isolation, missing metadata and device-list states.
+
+Total estimate for User Story: View Registered Devices: 13 hrs.
+
+User Story: Manage Device Registration
+
+Work Item Type: User Story
+
+Parent: Feature: Digital Services and Registered Devices
+
+Priority: 2
+
+Story Points: 3
+
+Description: As a customer, I want to manage supported registered devices so that I can keep my device list up to date.
+
+The customer can perform supported actions such as deregistering a device. A confirmation explains the effect before the action is submitted.
+
+Acceptance Criteria:
+
+Only supported device actions are displayed.
+
+Deregistration requires customer confirmation.
+
+A successful action updates the registered-device list.
+
+The system prevents a customer from changing another account's devices.
+
+Task: Add device management actions
+
+Work Item Type: Task
+
+Parent: User Story: Manage Device Registration
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 3 hrs
+
+Description: Create supported action controls and confirmation messages.
+
+Task: Implement device registration management API
+
+Work Item Type: Task
+
+Parent: User Story: Manage Device Registration
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 6 hrs
+
+Description: Validate device ownership and submit supported deregistration requests.
+
+Task: Test device management permissions
+
+Work Item Type: Task
+
+Parent: User Story: Manage Device Registration
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 4 hrs
+
+Description: Cover valid deregistration, repeated requests and unauthorised device IDs.
+
+Total estimate for User Story: Manage Device Registration: 13 hrs.
+
+Feature 7.2: Troubleshooting and Support
+
+Work Item Type: Feature
+
+Parent: Epic: Digital Services and Device Support
+
+Priority: 2
+
+Description: Provide guided troubleshooting for common device and digital-service problems, and create a support hand-off when self-service does not resolve the issue.
+
+User Story: Find Help for a Device Issue
+
+Work Item Type: User Story
+
+Parent: Feature: Troubleshooting and Support
+
+Priority: 2
+
+Story Points: 5
+
+Description: As a customer, I want to choose my device and issue so that I receive troubleshooting steps that match my problem.
+
+The customer selects a device category and issue type. The page displays ordered troubleshooting steps, relevant checks and a result prompt to confirm whether the issue is resolved.
+
+Acceptance Criteria:
+
+Device categories and issue types are selectable.
+
+Troubleshooting steps match the selected issue.
+
+The customer can mark the issue as resolved or not resolved.
+
+The guide remains usable on desktop and mobile.
+
+Task: Design troubleshooting guide screens
+
+Work Item Type: Task
+
+Parent: User Story: Find Help for a Device Issue
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 5 hrs
+
+Description: Build device selection, issue categories, step list and resolution prompt.
+
+Task: Create troubleshooting content service
+
+Work Item Type: Task
+
+Parent: User Story: Find Help for a Device Issue
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 5 hrs
+
+Description: Retrieve the correct guide by device category and issue code.
+
+Task: Test guide navigation and content
+
+Work Item Type: Task
+
+Parent: User Story: Find Help for a Device Issue
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 3 hrs
+
+Description: Verify category mapping, step order, mobile layout and resolution responses.
+
+Total estimate for User Story: Find Help for a Device Issue: 13 hrs.
+
+User Story: Contact Support with Issue Details
+
+Work Item Type: User Story
+
+Parent: Feature: Troubleshooting and Support
+
+Priority: 2
+
+Story Points: 3
+
+Description: As a customer, I want to contact support with my device and issue details so that I do not need to explain everything again.
+
+If troubleshooting fails, the customer can start a support request. The form includes the selected device and issue summary, allows an additional description and returns a case reference.
+
+Acceptance Criteria:
+
+The support option appears after the customer indicates the issue is unresolved.
+
+Selected device and troubleshooting context are included in the request.
+
+The customer can add a description and preferred contact method.
+
+A case reference and confirmation are displayed after successful submission.
+
+Task: Build support request form
+
+Work Item Type: Task
+
+Parent: User Story: Contact Support with Issue Details
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 4 hrs
+
+Description: Prefill device and issue context and add description/contact fields.
+
+Task: Integrate customer support case API
+
+Work Item Type: Task
+
+Parent: User Story: Contact Support with Issue Details
+
+Priority: 2
+
+Activity: Development
+
+Original Estimate: 7 hrs
+
+Description: Create a case with the relevant account and troubleshooting context.
+
+Task: Test support hand-off
+
+Work Item Type: Task
+
+Parent: User Story: Contact Support with Issue Details
+
+Priority: 2
+
+Activity: Testing
+
+Original Estimate: 4 hrs
+
+Description: Verify case creation, required fields, duplicate submissions and case reference display.
+
+Total estimate for User Story: Contact Support with Issue Details: 15 hrs.
